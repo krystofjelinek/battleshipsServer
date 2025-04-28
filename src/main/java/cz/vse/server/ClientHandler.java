@@ -1,5 +1,7 @@
 package cz.vse.server;
 
+import lombok.Setter;
+
 import java.io.*;
 import java.net.*;
 
@@ -15,7 +17,7 @@ public class ClientHandler implements Runnable {
         this.server = server;
     }
 
-    public void setGameSession(GameSession gameSession) {
+    void setGameSession(GameSession gameSession) {
         this.gameSession = gameSession; // Set the GameSession when paired
     }
 
@@ -34,7 +36,7 @@ public class ClientHandler implements Runnable {
                 String receivedMessage = in.readLine();
                 if (gameSession != null) {
                     // Process the received message with the current GameSession
-                    Message message = new Message(receivedMessage, gameSession);
+                    Message message = new Message(receivedMessage, gameSession, this);
                     message.process(receivedMessage);
                 } else {
                     sendMessage("Game session not yet started.");
@@ -53,9 +55,5 @@ public class ClientHandler implements Runnable {
 
     public void sendMessage(String message) {
         out.println(message);
-    }
-
-    public String receiveMessage() throws IOException {
-        return in.readLine();
     }
 }

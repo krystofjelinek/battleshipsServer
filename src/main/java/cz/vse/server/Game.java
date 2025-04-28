@@ -50,18 +50,17 @@ public class Game {
     }
 
     public String bomb(int x, int y) {
-
         if ((x < 0 || x > 10) || (y < 0 || y > 10)) {
             log.error("Invalid coordinates for bomb placement: {}, {}", x, y);
             return "Invalid coordinates for bomb placement"; //TODO upravit aby vracelo chybu na FE
         } else {
-            int a = listPlayerTwo.get(x-1).get(y-1);
+            int a = listPlayerOne.get(x-1).get(y-1);
             if (a == 0){
-                listPlayerTwo.get(x-1).set(y-1, -1);
+                listPlayerOne.get(x-1).set(y-1, -1);
                 System.out.println("HIT");
                 return "HIT";
             } else  {
-                listPlayerTwo.get(x-1).set(y-1, 2);
+                listPlayerOne.get(x-1).set(y-1, 2);
                 System.out.println("MISS");
                 return "MISS";
             }
@@ -124,7 +123,7 @@ public class Game {
 
                     // Check for overlaps
                     if (listPlayerTwo.get(newX).get(newY) != 1) {
-                        log.error("Invalid placement: Overlap detected at {}, {}", newX, newY);
+                        log.warn("Invalid placement: Overlap detected at {}, {}", newX, newY);
                         return "Invalid placement: Overlap detected";
                     }
                 }

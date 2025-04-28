@@ -9,6 +9,10 @@ public enum ShipShape {
     T_SHAPE(new int[][]{
             {1, 1, 1},
             {0, 1, 0}
+    }),
+    I_SHAPE(new int[][]{
+            {1},
+            {1}
     });
 
     private final int[][] shape;
