@@ -14,7 +14,7 @@ public class Server {
     }
 
     public static void main(String[] args) {
-        int port = 12345; // Default port
+        int port = 1234; // Default port
         if (args.length > 0) {
             try {
                 port = Integer.parseInt(args[0]);

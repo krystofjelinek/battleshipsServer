@@ -32,10 +32,9 @@ public class ClientHandler implements Runnable {
 
             // Continuously listen for messages from the client
 
-            while ((in.readLine()) != null) {
+            while (true) {
                 String receivedMessage = in.readLine();
                 if (gameSession != null) {
-                    // Process the received message with the current GameSession
                     Message message = new Message(receivedMessage, gameSession, this);
                     message.process(receivedMessage);
                 } else {
