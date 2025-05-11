@@ -10,9 +10,26 @@ public enum ShipShape {
             {1, 1, 1},
             {0, 1, 0}
     }),
-    I_SHAPE(new int[][]{
-            {1},
+    ONE_SHAPE(new int[][]{
             {1}
+    }),
+
+    TWO_SHAPE(new int[][]{
+        {1},
+        {1}
+    }),
+
+    THREE_SHAPE(new int[][]{
+        {1},
+        {1},
+        {1}
+    }),
+
+    FOUR_SHAPE(new int[][]{
+        {1},
+        {1},
+        {1},
+        {1}
     });
 
     private final int[][] shape;

@@ -41,6 +41,9 @@ public class Message {
         Game game = gameSession.getGame();
 
         if (firstPart.equals(COMMAND.BOMB.name())) {
+            if (gameSession.isPlacementPhase()) {
+                return;
+            }
             if (gameSession.getCurrentPlayer() != gameSession.getOtherPlayer()) {
                 if (parts.length != 3) {
                     log.warn("Invalid BOMB command: {}", message);
@@ -59,6 +62,27 @@ public class Message {
                 }
             } else {
                 gameSession.getOtherPlayer().sendMessage("Not your turn!");
+            }
+        } else if (firstPart.equals(COMMAND.PLACE.name())) {
+            if (gameSession.isPlacementPhase()) {
+                if (parts.length != 5) {
+                    log.warn("Invalid PLACE command: {}", message);
+                    return;
+                }
+                try {
+                    int x = Integer.parseInt(parts[1]);
+                    int y = Integer.parseInt(parts[2]);
+                    int[][] shape = ShipShape.valueOf(parts[3]).getShape();
+                    int r = Integer.parseInt(parts[4]);
+                    String result = game.place(x, y, shape, r, sender);
+                    sender.sendMessage(result);
+                    gameSession.switchTurn();
+                    gameSession.incrementShipsPlaced(sender);
+                } catch (NumberFormatException e) {
+                    log.error("Error processing PLACE command: {}", message, e);
+                }
+            } else {
+                gameSession.getOtherPlayer().sendMessage("It is not placement phase!");
             }
         } else {
             log.warn("Unknown command: {}", firstPart);

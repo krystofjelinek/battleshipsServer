@@ -12,11 +12,12 @@ public class Game {
     private List<List<Integer>> listPlayerTwo = new ArrayList<>();
     private String player2;
     private String status;
+    private GameSession gameSession;
     private static final Logger log = LoggerFactory.getLogger(Game.class);
 
-    public Game(String player1, String player2) {
-        this.player1 = player1;
-        this.player2 = player2;
+    public Game(GameSession gs) {
+        this.gameSession = gs;
+
     }
 
 
@@ -33,7 +34,7 @@ public class Game {
         //System.out.println(listPlayerTwo);
     }
 
-    public static void main(String[] args) {
+/*    public static void main(String[] args) {
         Game game = new Game("Player1", "Player2");
         game.initializeGame();
         //System.out.println(game.bomb(3, 3));
@@ -47,22 +48,33 @@ public class Game {
         game.bomb(2,1);
         System.out.println(game.listPlayerTwo);
         game.checkForWin();
-    }
+    }*/
 
     public String bomb(int x, int y) {
         if ((x < 0 || x > 10) || (y < 0 || y > 10)) {
             log.error("Invalid coordinates for bomb placement: {}, {}", x, y);
             return "Invalid coordinates for bomb placement"; //TODO upravit aby vracelo chybu na FE
         } else {
-            int a = listPlayerOne.get(x-1).get(y-1);
-            if (a == 0){
-                listPlayerOne.get(x-1).set(y-1, -1);
-                System.out.println("HIT");
-                return "HIT";
-            } else  {
-                listPlayerOne.get(x-1).set(y-1, 2);
-                System.out.println("MISS");
-                return "MISS";
+            if (gameSession.isPlayer1Turn())
+                if (listPlayerTwo.get(x-1).get(y-1) == 0) {
+                    listPlayerTwo.get(x-1).set(y-1, -1);
+                    System.out.println("HIT");
+                    return "HIT";
+                } else {
+                    listPlayerTwo.get(x-1).set(y-1, 2);
+                    System.out.println("MISS");
+                    return "MISS";
+                }
+            else {
+                if (listPlayerOne.get(x-1).get(y-1) == 0) {
+                    listPlayerOne.get(x-1).set(y-1, -1);
+                    System.out.println("HIT");
+                    return "HIT";
+                } else {
+                    listPlayerOne.get(x-1).set(y-1, 2);
+                    System.out.println("MISS");
+                    return "MISS";
+                }
             }
         }
     }
@@ -104,9 +116,11 @@ public class Game {
         return rotatedShape;
     }
 
-    public String place(int x, int y, int[][] shape, int rotation) {
+    public String place(int x, int y, int[][] shape, int rotation, ClientHandler sender) {
         // Rotate the shape based on the rotation parameter
         int[][] rotatedShape = rotateShape(shape, rotation);
+
+        List<List<Integer>> playerMap = sender == gameSession.getPlayer1() ? listPlayerOne : listPlayerTwo;
 
         // Validate coordinates
         for (int i = 0; i < rotatedShape.length; i++) {
@@ -122,7 +136,7 @@ public class Game {
                     }
 
                     // Check for overlaps
-                    if (listPlayerTwo.get(newX).get(newY) != 1) {
+                    if (playerMap.get(newX).get(newY) != 1) {
                         log.warn("Invalid placement: Overlap detected at {}, {}", newX, newY);
                         return "Invalid placement: Overlap detected";
                     }
@@ -134,7 +148,7 @@ public class Game {
         for (int i = 0; i < rotatedShape.length; i++) {
             for (int j = 0; j < rotatedShape[i].length; j++) {
                 if (rotatedShape[i][j] == 1) { // Part of the ship
-                    listPlayerTwo.get(x + i).set(y + j, 0);
+                    playerMap.get(x + i).set(y + j, 0);
                 }
             }
         }
@@ -182,22 +196,34 @@ public class Game {
         return "Placement successful";
     }
 
-    public String checkForWin() {
+    public void checkForWin() {
         // Check if all ships of the opponent are sunk
-        boolean allSunk = true;
+        boolean player2AllSunk = true;
         for (List<Integer> row : listPlayerTwo) {
             for (Integer cell : row) {
                 if (cell == 1) { // Ship part not sunk
-                    allSunk = false;
+                    player2AllSunk = false;
                     break;
                 }
             }
         }
 
-        if (allSunk) {
-            return "All ships sunk! You win!";
-        } else {
-            return "Ships still afloat.";
+        boolean player1AllSunk = true;
+        for (List<Integer> row : listPlayerOne) {
+            for (Integer cell : row) {
+                if (cell == 1) { // Ship part not sunk
+                    player1AllSunk = false;
+                    break;
+                }
+            }
+        }
+
+        if (player2AllSunk) {
+            gameSession.getPlayer1().sendMessage("WIN");
+            gameSession.getPlayer2().sendMessage("LOST");
+        } else if (player1AllSunk) {
+            gameSession.getPlayer1().sendMessage("LOST");
+            gameSession.getPlayer2().sendMessage("WIN");
         }
     }
 }
