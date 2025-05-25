@@ -1,5 +1,12 @@
 package cz.vse.server;
 
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * Represents a game session between two players.
+ * Handles the game state, player turns, and ship placement.
+ */
 public class GameSession {
     private final ClientHandler player1;
     private final ClientHandler player2;
@@ -8,14 +15,58 @@ public class GameSession {
     private boolean placementPhase = true;
     private int player1ShipsPlaced = 0;
     private int player2ShipsPlaced = 0;
+    private final Map<ClientHandler, Map<ShipShape, Integer>> shipPlacementCount = new HashMap<>();
 
+
+    /**
+     * Constructor for GameSession.
+     * Initializes the game and sets up ship placement counts for both players.
+     *
+     * @param player1 The first player
+     * @param player2 The second player
+     */
     public GameSession(ClientHandler player1, ClientHandler player2) {
         this.player1 = player1;
         this.player2 = player2;
         this.game = new Game(this);
         this.game.initializeGame();
+
+        shipPlacementCount.put(player1, new HashMap<>());
+        shipPlacementCount.put(player2, new HashMap<>());
+        for (ShipShape shape : ShipShape.values()) {
+            shipPlacementCount.get(player1).put(shape, 0);
+            shipPlacementCount.get(player2).put(shape, 0);
+        }
     }
 
+    /**
+     * Checks if a player can place a ship of a certain shape.
+     *
+     * @param player The player trying to place the ship
+     * @param shape  The shape of the ship
+     * @return true if the player can place the ship, false otherwise
+     */
+    public synchronized boolean canPlaceShip(ClientHandler player, ShipShape shape) {
+        int count = shipPlacementCount.get(player).getOrDefault(shape, 0);
+        return count < 2; // Each ship type can only be placed twice
+    }
+
+    /**
+     * Increments the count of ships placed by a player for a specific shape.
+     *
+     * @param player The player who placed the ship
+     * @param shape  The shape of the ship
+     */
+    public synchronized void incrementShipCount(ClientHandler player, ShipShape shape) {
+        int count = shipPlacementCount.get(player).getOrDefault(shape, 0);
+        shipPlacementCount.get(player).put(shape, count + 1);
+    }
+
+    /**
+     * Switches the turn between players.
+     * If it's the placement phase, the turn is not switched.
+     * Otherwise, it alternates the turn between player1 and player2.
+     */
     public synchronized void switchTurn() {
         if (placementPhase) {
             return; // Don't switch turns during placement phase
@@ -32,6 +83,11 @@ public class GameSession {
         }
     }
 
+    /**
+     * Increments the number of ships placed by a player.
+     * If both players have placed 8 ships, the placement phase ends.
+     * @param player
+     */
     public synchronized void incrementShipsPlaced(ClientHandler player) {
         if (player == player1) {
             player1ShipsPlaced++;
@@ -39,12 +95,19 @@ public class GameSession {
             player2ShipsPlaced++;
         }
 
-        if (player1ShipsPlaced >= 6 && player2ShipsPlaced >= 6) {
+        if (player1ShipsPlaced >= 8 && player2ShipsPlaced >= 8) {
             placementPhase = false;
             start();
         }
     }
 
+    /**
+     * Checks if it's the player's turn.
+     * If it's the placement phase, it returns true for both players.
+     *
+     * @param player The player to check
+     * @return true if it's the player's turn, false otherwise
+     */
     public synchronized boolean isPlayerTurn(ClientHandler player) {
         if (placementPhase) {
             return true;
@@ -70,14 +133,19 @@ public class GameSession {
         return player1Turn ? player2 : player1;
     }
 
+    public ClientHandler getOtherPlayer(ClientHandler player) {
+        if (player == player1) {
+            return player2;
+        } else if (player == player2) {
+            return player1;
+        }
+        return null; // or throw an exception
+    }
+
+    //TODO to be removed
     public void start() {
         player1.sendMessage("Game started! You are Player 1.");
         player2.sendMessage("Game started! You are Player 2.");
-
-        //player1.sendMessage("Your turn!");
-        //player2.sendMessage("Waiting for Player 1...");
-
-
     }
 
     public Game getGame() {
@@ -90,6 +158,14 @@ public class GameSession {
 
     public ClientHandler getPlayer2() {
         return  player2;
+    }
+
+    public void notifyAllClients(String s) {
+        player1.sendMessage(s);
+        player2.sendMessage(s);
+    }
+
+    public void closeAllConnections() {
     }
 }
 

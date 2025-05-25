@@ -5,13 +5,12 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
+/**
+ * This class represents the game logic for a two-player game.
+ */
 public class Game {
-    private String name;
-    private String player1;
     private List<List<Integer>> listPlayerOne = new ArrayList<>();
     private List<List<Integer>> listPlayerTwo = new ArrayList<>();
-    private String player2;
-    private String status;
     private GameSession gameSession;
     private static final Logger log = LoggerFactory.getLogger(Game.class);
 
@@ -20,65 +19,60 @@ public class Game {
 
     }
 
-
-
+    /**
+     * Initializes the game board for both players.
+     * Each player has a 10x10 grid represented as a list of lists.
+     * Each cell is initialized to 1, indicating that it is empty.
+     */
     public void initializeGame() {
         for (int i = 0; i < 10; i++) {
             listPlayerOne.add(new ArrayList<>(Arrays.asList(1,1,1,1,1,1,1,1,1,1)));
             listPlayerTwo.add(new ArrayList<>(Arrays.asList(1,1,1,1,1,1,1,1,1,1)));
         }
-
-        // Example coordinates for player1
-        // Initialize maps for both players
-        // Initialize game logic here
-        //System.out.println(listPlayerTwo);
     }
 
-/*    public static void main(String[] args) {
-        Game game = new Game("Player1", "Player2");
-        game.initializeGame();
-        //System.out.println(game.bomb(3, 3));
-        System.out.println(game.place(0, 0, ShipShape.L_SHAPE.getShape(), 1));
-       // System.out.println(game.place(5,5,ShipShape.T_SHAPE.getShape(), 2));// Place L-shaped ship
-       // System.out.println(game.place(5, 5, tShape));
-        System.out.println(game.listPlayerTwo);// Place T-shaped ship
-        game.bomb(1,1);
-        game.bomb(1,2);
-        game.bomb(1,3);
-        game.bomb(2,1);
-        System.out.println(game.listPlayerTwo);
-        game.checkForWin();
-    }*/
-
+    /**
+     * This method is called when a player bombs another player's ship.
+     * It checks if the coordinates are valid and if the bomb hits or misses.
+     * If the bomb hits, it updates the grid and checks for a win condition.
+     * @param x x coordinate
+     * @param y y coordinate
+     * @return a string indicating the result of the bombing (HIT or MISS)
+     */
     public String bomb(int x, int y) {
         if ((x < 0 || x > 10) || (y < 0 || y > 10)) {
             log.error("Invalid coordinates for bomb placement: {}, {}", x, y);
-            return "Invalid coordinates for bomb placement"; //TODO upravit aby vracelo chybu na FE
+            return "Invalid coordinates for bomb placement";
         } else {
             if (gameSession.isPlayer1Turn())
                 if (listPlayerTwo.get(x-1).get(y-1) == 0) {
                     listPlayerTwo.get(x-1).set(y-1, -1);
-                    System.out.println("HIT");
-                    return "HIT";
+                    checkForWin();
+                    return "HIT" + " " + x + " " + y;
                 } else {
                     listPlayerTwo.get(x-1).set(y-1, 2);
-                    System.out.println("MISS");
-                    return "MISS";
+                    return "MISS" + " " + x + " " + y;
                 }
             else {
                 if (listPlayerOne.get(x-1).get(y-1) == 0) {
                     listPlayerOne.get(x-1).set(y-1, -1);
-                    System.out.println("HIT");
-                    return "HIT";
+                    checkForWin();
+                    return "HIT" + " " + x + " " + y;
                 } else {
                     listPlayerOne.get(x-1).set(y-1, 2);
-                    System.out.println("MISS");
-                    return "MISS";
+                    return "MISS" + " " + x + " " + y;
                 }
             }
         }
     }
 
+    /**
+     * Rotates the shape of the ship based on the rotation parameter.
+     * The rotation can be 0 (no rotation), 1 (90 degrees clockwise), 2 (180 degrees), 3 (270 degrees clockwise).
+     * @param shape the shape of the ship represented as a 2D array
+     * @param rotation the rotation parameter
+     * @return the rotated shape of the ship
+     */
     private int[][] rotateShape(int[][] shape, int rotation) {
         int rows = shape.length;
         int cols = shape[0].length;
@@ -116,6 +110,16 @@ public class Game {
         return rotatedShape;
     }
 
+    /**
+     * Places the ship on the grid for the specified player.
+     * It checks if the coordinates are valid and if the ship can be placed without overlaps.
+     * @param x x coordinate
+     * @param y y coordinate
+     * @param shape the shape of the ship represented as a 2D array
+     * @param rotation the rotation parameter
+     * @param sender the player who is placing the ship
+     * @return a string indicating the result of the placement (success or failure)
+     */
     public String place(int x, int y, int[][] shape, int rotation, ClientHandler sender) {
         // Rotate the shape based on the rotation parameter
         int[][] rotatedShape = rotateShape(shape, rotation);
@@ -132,13 +136,13 @@ public class Game {
                     // Check boundaries
                     if (newX < 0 || newX >= 10 || newY < 0 || newY >= 10) {
                         log.error("Invalid placement: Ship part out of bounds at {}, {}", newX, newY);
-                        return "Invalid placement: Out of bounds";
+                        return "FAILURE";
                     }
 
                     // Check for overlaps
                     if (playerMap.get(newX).get(newY) != 1) {
-                        log.warn("Invalid placement: Overlap detected at {}, {}", newX, newY);
-                        return "Invalid placement: Overlap detected";
+                        log.error("Invalid placement: Overlap detected at {}, {}", newX, newY);
+                        return "FAILURE";
                     }
                 }
             }
@@ -154,48 +158,16 @@ public class Game {
         }
 
         log.info("Ship placed successfully at {}, {} with rotation {}", x, y, rotation);
-        return "Placement successful";
+        return "SUCCESS";
     }
 
-    public String move(int x, int y, int[][] shape, int rotation) {
-        // Rotate the shape based on the rotation parameter
-        int[][] rotatedShape = rotateShape(shape, rotation);
-
-        // Validate coordinates
-        for (int i = 0; i < rotatedShape.length; i++) {
-            for (int j = 0; j < rotatedShape[i].length; j++) {
-                if (rotatedShape[i][j] == 1) { // Part of the ship
-                    int newX = x + i;
-                    int newY = y + j;
-
-                    // Check boundaries
-                    if (newX < 0 || newX >= 10 || newY < 0 || newY >= 10) {
-                        log.error("Invalid placement: Ship part out of bounds at {}, {}", newX, newY);
-                        return "Invalid placement: Out of bounds";
-                    }
-
-                    // Check for overlaps
-                    if (listPlayerTwo.get(newX).get(newY) != 1) {
-                        log.error("Invalid placement: Overlap detected at {}, {}", newX, newY);
-                        return "Invalid placement: Overlap detected";
-                    }
-                }
-            }
-        }
-
-        // Place the ship
-        for (int i = 0; i < rotatedShape.length; i++) {
-            for (int j = 0; j < rotatedShape[i].length; j++) {
-                if (rotatedShape[i][j] == 1) { // Part of the ship
-                    listPlayerTwo.get(x + i).set(y + j, 0);
-                }
-            }
-        }
-
-        log.info("Ship moved successfully at {}, {} with rotation {}", x, y, rotation);
-        return "Placement successful";
-    }
-
+    /**
+     * Checks if all ships of the opponent are sunk.
+     * If so, it sends a win message to the current player and a loss message to the opponent.
+     * This method is called after each bombing action.
+     * It checks the grid of both players to determine if any ship parts are left.
+     * If all ship parts are sunk, it sends a win message to the current player and a loss message to the opponent.
+     */
     public void checkForWin() {
         // Check if all ships of the opponent are sunk
         boolean player2AllSunk = true;
