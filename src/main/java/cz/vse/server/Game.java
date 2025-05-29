@@ -9,9 +9,9 @@ import java.util.*;
  * This class represents the game logic for a two-player game.
  */
 public class Game {
-    private List<List<Integer>> listPlayerOne = new ArrayList<>();
-    private List<List<Integer>> listPlayerTwo = new ArrayList<>();
-    private GameSession gameSession;
+    private final List<List<Integer>> listPlayerOne = new ArrayList<>();
+    private final List<List<Integer>> listPlayerTwo = new ArrayList<>();
+    private final GameSession gameSession;
     private static final Logger log = LoggerFactory.getLogger(Game.class);
 
     public Game(GameSession gs) {
@@ -135,13 +135,13 @@ public class Game {
 
                     // Check boundaries
                     if (newX < 0 || newX >= 10 || newY < 0 || newY >= 10) {
-                        log.error("Invalid placement: Ship part out of bounds at {}, {}", newX, newY);
+                        log.warn("Invalid placement: Ship part out of bounds at {}, {}", newX, newY);
                         return "FAILURE";
                     }
 
                     // Check for overlaps
                     if (playerMap.get(newX).get(newY) != 1) {
-                        log.error("Invalid placement: Overlap detected at {}, {}", newX, newY);
+                        log.warn("Invalid placement: Overlap detected at {}, {}", newX, newY);
                         return "FAILURE";
                     }
                 }

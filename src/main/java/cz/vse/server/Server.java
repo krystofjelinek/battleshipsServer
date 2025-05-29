@@ -80,10 +80,13 @@ public class Server {
 
             // Assign the GameSession to both players
             player1.setGameSession(gameSession);
+            log.info("{} has been assigned to the game session", player1.getUsername());
             player2.setGameSession(gameSession);
+            log.info("{} has been assigned to the game session", player2.getUsername());
 
             // Start the game session
             gameSession.start();
+            log.info("Game session started between {} and {}", player1.getUsername(), player2.getUsername());
         }
     }
 
@@ -91,7 +94,7 @@ public class Server {
      * Closes all connections and shuts down the server.
      * This method is called when the server is shutting down.
      */
-    public synchronized void closeAllConnections() {
+    public synchronized void closeAllConnections() throws IOException {
         for (ClientHandler client : waitingClients) {
             client.closeConnection();
         }
@@ -110,7 +113,7 @@ public class Server {
         log.warn("All connections closed and server shut down.");
     }
 
-    public synchronized void closeConnection() {
+    public synchronized void closeConnection() throws IOException {
         for (ClientHandler client : waitingClients) {
             client.closeConnection();
         }

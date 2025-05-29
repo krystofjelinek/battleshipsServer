@@ -3,12 +3,14 @@ package cz.vse.server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
+
 /**
  * The Message class processes incoming messages from clients and handles game commands.
  * It validates the commands, interacts with the GameSession, and sends responses back to clients.
  */
 public class Message {
-    private static Logger log = LoggerFactory.getLogger(Message.class);
+    private static final Logger log = LoggerFactory.getLogger(Message.class);
     private String message;
     private GameSession gameSession;
     private ClientHandler sender;
@@ -43,12 +45,12 @@ public class Message {
      *
      * @param message The message to be processed.
      */
-    public void process(String message) {
+    public void process(String message) throws IOException {
         log.info("Received message: {}", message);
         String[] parts = message.split(" ");
 
         if (!gameSession.isPlayerTurn(sender)) {
-            log.warn("Command could not be processed: {}, it is not {}`s turn", message, sender.toString());
+            log.warn("Command could not be processed: {}, it is not {}`s turn", message, sender.getUsername());
             return;
         }
 
@@ -92,7 +94,7 @@ public class Message {
                     log.error("Error processing BOMB command: {}", message, e);
                 }
             } else {
-                log.warn("Command could not be processed: {}, it is not {}`s turn", message, sender.toString());
+                log.warn("Command could not be processed: {}, it is not {}`s turn", message, sender.getUsername());
             }
         } else if (firstPart.equalsIgnoreCase(COMMAND.PLACE.name())) {
             if (gameSession.isPlacementPhase()) {
@@ -142,9 +144,9 @@ public class Message {
     /**
      * Handles the QUIT command, either from the client or the server.
      */
-    private void handleQuitCommand() {
+    private void handleQuitCommand() throws IOException {
         if (sender != null) { // Client sent QUIT
-            log.info("Client {} is disconnecting.", sender);
+            log.info("Client {} is disconnecting.", sender.getUsername());
             sender.sendMessage("QUIT: Connection closed by client.");
             sender.closeConnection();
         } else { // Server sent QUIT
