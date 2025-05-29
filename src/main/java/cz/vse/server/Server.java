@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.net.*;
+import java.util.Set;
 import java.util.concurrent.*;
 
 /**
@@ -16,6 +17,8 @@ public class Server {
     private final ExecutorService threadPool = Executors.newCachedThreadPool();
     private final ConcurrentLinkedQueue<ClientHandler> waitingClients = new ConcurrentLinkedQueue<>();
     private final Logger log = LoggerFactory.getLogger(this.getClass());
+    private final Set<String> activeUsernames = ConcurrentHashMap.newKeySet();
+
 
     public Server(int port) {
         this.port = port;
@@ -69,7 +72,16 @@ public class Server {
      *
      * @param client The client to be added
      */
-    public synchronized void addWaitingClient(ClientHandler client) {
+    public synchronized void addWaitingClient(ClientHandler client) throws IOException {
+        String username = client.getUsername();
+        if (activeUsernames.contains(username)) {
+            log.warn("Username '{}' is already in use. Rejecting client connection.", username);
+            client.sendMessage("FAILURE");
+            client.closeConnection(); // TODO remove active username when closing a connection
+            return;
+        }
+
+        activeUsernames.add(username);
         waitingClients.add(client);
         if (waitingClients.size() >= 2) {
             ClientHandler player1 = waitingClients.poll();
