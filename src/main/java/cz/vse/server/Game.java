@@ -110,6 +110,32 @@ public class Game {
     }
 
     /**
+     * Checks if the ship can be placed at the specified coordinates.
+     * It checks if the coordinates are within bounds and if the adjacent cells are occupied.
+     * @param x x coordinate
+     * @param y y coordinate
+     * @param playerMap the grid of the player
+     * @return true if the ship can be placed, false otherwise
+     * @note This part of code is AI generated
+     */
+    private boolean isAdjacentCellOccupied(List<List<Integer>> playerMap, int x, int y) {
+        int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1};
+        int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};
+
+        for (int i = 0; i < dx.length; i++) {
+            int newX = x + dx[i];
+            int newY = y + dy[i];
+
+            if (newX >= 0 && newX < 10 && newY >= 0 && newY < 10) {
+                if (playerMap.get(newX).get(newY) == 0) { // Adjacent cell occupied
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
      * Places the ship on the grid for the specified player.
      * It checks if the coordinates are valid and if the ship can be placed without overlaps.
      * @param x x coordinate
@@ -141,6 +167,12 @@ public class Game {
                     // Check for overlaps
                     if (playerMap.get(newX).get(newY) != 1) {
                         log.warn("Invalid placement: Overlap detected at {}, {}", newX, newY);
+                        return "FAILURE";
+                    }
+
+                    // Check for adjacency
+                    if (isAdjacentCellOccupied(playerMap, newX, newY)) {
+                        log.warn("Invalid placement: Adjacent ship detected at {}, {}", newX, newY);
                         return "FAILURE";
                     }
                 }
