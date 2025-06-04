@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.net.*;
+import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.*;
 
@@ -18,6 +19,7 @@ public class Server {
     private final ConcurrentLinkedQueue<ClientHandler> waitingClients = new ConcurrentLinkedQueue<>();
     private final Logger log = LoggerFactory.getLogger(this.getClass());
     private final Set<String> activeUsernames = ConcurrentHashMap.newKeySet();
+    private boolean running = true;
 
 
     public Server(int port) {
@@ -26,26 +28,37 @@ public class Server {
 
     /**
      * Main method to start the server.
-     * It accepts a port number as an argument; if not provided, it defaults to 1234.
-     *
+     * It accepts a port number as an argument; if not provided, it takes the port number from config.properties file.
      * @param args Command line arguments
      */
     public static void main(String[] args) {
-        int port = 1234; // Default port
+        int port = 0;
         if (args.length > 0) {
             try {
                 port = Integer.parseInt(args[0]);
+                Server server = new Server(port);
+                server.start();
             } catch (NumberFormatException e) {
                 System.err.println("Invalid port number. Using default port " + port);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
         }
 
-        Server server = new Server(port);
-        try {
-            server.start();
-        } catch (IOException e) {
-            //TODO logging
-            e.printStackTrace();
+        if (args.length == 0 || port <= 0) {
+            Properties properties = new Properties();
+            try (FileInputStream input = new FileInputStream("src/main/resources/config.properties")) {
+                properties.load(input);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+            int portFromFile = Integer.parseInt(properties.getProperty("server.port", "1234")); // Default to 1234 if not specified
+            Server server = new Server(portFromFile);
+            try {
+                server.start();
+            } catch (IOException e) {
+                System.err.println("Error starting the server: " + e.getMessage());
+            }
         }
     }
 
@@ -59,7 +72,7 @@ public class Server {
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             log.info("Server is listening for connections on port: {}", port);
 
-            while (true) {
+            while (running) {
                 Socket clientSocket = serverSocket.accept();
                 ClientHandler clientHandler = new ClientHandler(clientSocket, this);
                 threadPool.execute(clientHandler);
@@ -76,8 +89,8 @@ public class Server {
         String username = client.getUsername();
         if (activeUsernames.contains(username)) {
             log.warn("Username '{}' is already in use. Rejecting client connection.", username);
-            client.sendMessage("FAILURE");
-            client.closeConnection(); // TODO remove active username when closing a connection
+            client.sendMessage("QUIT");
+            client.closeConnection();
             return;
         }
 
@@ -99,6 +112,15 @@ public class Server {
             // Start the game session
             gameSession.start();
             log.info("Game session started between {} and {}", player1.getUsername(), player2.getUsername());
+        }
+    }
+
+    public synchronized void removeActiveUser (ClientHandler client) {
+        String username = client.getUsername();
+        if (activeUsernames.remove(username)) {
+            log.info("Removed active user: {}", username);
+        } else {
+            log.warn("Attempted to remove non-existent user: {}", username);
         }
     }
 

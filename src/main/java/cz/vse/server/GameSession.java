@@ -1,5 +1,7 @@
 package cz.vse.server;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,6 +9,7 @@ import java.util.Map;
  * Represents a game session between two players.
  * Handles the game state, player turns, and ship placement.
  */
+@Slf4j
 public class GameSession {
     private final ClientHandler player1;
     private final ClientHandler player2;
@@ -48,6 +51,9 @@ public class GameSession {
      */
     public synchronized boolean canPlaceShip(ClientHandler player, ShipShape shape) {
         int count = shipPlacementCount.get(player).getOrDefault(shape, 0);
+        if (shape == ShipShape.SIX_SHAPE) {
+            return count < 1; // SIX_SHAPE can only be placed once
+        }
         return count < 2; // Each ship type can only be placed twice
     }
 
@@ -69,7 +75,7 @@ public class GameSession {
      */
     public synchronized void switchTurn() {
         if (placementPhase) {
-            return; // Don't switch turns during placement phase
+            log.error("Cannot switch turn during placement phase");
         } else {
             if (this.isPlayer1Turn()) {
                 player1Turn = false;
@@ -86,7 +92,7 @@ public class GameSession {
     /**
      * Increments the number of ships placed by a player.
      * If both players have placed 8 ships, the placement phase ends.
-     * @param player
+     * @param player The player who placed the ship
      */
     public synchronized void incrementShipsPlaced(ClientHandler player) {
         if (player == player1) {
@@ -95,9 +101,8 @@ public class GameSession {
             player2ShipsPlaced++;
         }
 
-        if (player1ShipsPlaced >= 8 && player2ShipsPlaced >= 8) {
+        if (player1ShipsPlaced >= 7 && player2ShipsPlaced >= 7) {
             placementPhase = false;
-            start();
         }
     }
 
@@ -133,19 +138,12 @@ public class GameSession {
         return player1Turn ? player2 : player1;
     }
 
-    public ClientHandler getOtherPlayer(ClientHandler player) {
-        if (player == player1) {
-            return player2;
-        } else if (player == player2) {
-            return player1;
-        }
-        return null; // or throw an exception
-    }
-
-    //TODO to be removed
+    /**
+     * Starts the game session by notifying both players that they are ready.
+     * This method is called after both players have placed their ships.
+     */
     public void start() {
-        player1.sendMessage("Game started! You are Player 1.");
-        player2.sendMessage("Game started! You are Player 2.");
+        notifyAllClients("READY");
     }
 
     public Game getGame() {

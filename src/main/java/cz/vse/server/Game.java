@@ -16,7 +16,6 @@ public class Game {
 
     public Game(GameSession gs) {
         this.gameSession = gs;
-
     }
 
     /**

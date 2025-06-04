@@ -14,7 +14,7 @@ public class ClientHandler implements Runnable {
     private GameSession gameSession; // Reference to the current GameSession
     private final Logger log = LoggerFactory.getLogger(this.getClass());
     private boolean isClosing = false;
-    private boolean isLoggedIn = false;
+    private boolean loggedIn = false;
     private String username;
 
     public ClientHandler(Socket socket, Server server) {
@@ -34,6 +34,14 @@ public class ClientHandler implements Runnable {
         return  username;
     }
 
+    public boolean isLoggedIn() {
+        return loggedIn;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
+    }
+
     @Override
     public void run() {
         try {
@@ -47,21 +55,24 @@ public class ClientHandler implements Runnable {
                 if (receivedMessage == null) {
                     break;
                 }
-                if (!isLoggedIn) {
-                    if (receivedMessage.startsWith("USER ")) {
+                if (!isLoggedIn()) {
+                    // Handle login or user-related commands
+                    if (receivedMessage.startsWith("USER")) {
                         String[] parts = receivedMessage.split(" ", 2);
-                        if (parts.length == 2 && !parts[1].isEmpty()) {
+                        if (parts.length == 2) {
                             setUsername(parts[1]);
-                            log.info("Client logged in with username: {}", parts[1]);
-                            isLoggedIn = true;
-                            sendMessage("SUCCESS");
-                            // Add the client to the waiting list only after successful login
+                            setLoggedIn(true);
+                            log.info("User '{}' logged in successfully", parts[1]);
+                            //sendMessage("Welcome, " + parts[1] + "!");
                             server.addWaitingClient(this);
+
                         } else {
-                            sendMessage("FAILURE: Invalid USER command. Format: USER <username>");
+                            log.warn("Invalid USER command format: {}", receivedMessage);
+                            sendMessage("ERROR: Invalid USER command format.");
                         }
                     } else {
-                        sendMessage("FAILURE: First command must be USER <username>");
+                        log.warn("Client not logged in. Message: {} could not be processed", receivedMessage);
+                        sendMessage("ERROR: You must log in first.");
                     }
                     continue;
                 }
@@ -71,6 +82,7 @@ public class ClientHandler implements Runnable {
                     message.process(receivedMessage);
                 } else {
                     log.warn("Game session not yet started. Message: {} could not be processed", receivedMessage);
+                    sendMessage("ERROR: Game session not started yet.");
                 }
             }
         } catch (IOException e) {
@@ -86,7 +98,7 @@ public class ClientHandler implements Runnable {
 
     public void sendMessage(String message) {
         out.println(message);
-        if (isLoggedIn) {
+        if (isLoggedIn()) {
             log.info("Server sent message: {} to client: {}.", message, this.username);
         } else {
             log.info("Server sent message: {} to client: {}.", message, this);
@@ -131,8 +143,13 @@ public class ClientHandler implements Runnable {
             }
 
             log.info("Connection to client {} was closed", this);
+            server.removeActiveUser(this);
         } catch (Exception e) {
             log.error("Unexe closing connection for client {}: {}", this.username, e.getMessage());
         }
+    }
+
+    public Server getServer() {
+        return server;
     }
 }

@@ -11,15 +11,14 @@ import java.io.IOException;
  */
 public class Message {
     private static final Logger log = LoggerFactory.getLogger(Message.class);
-    private String message;
-    private GameSession gameSession;
-    private ClientHandler sender;
+    private final String message;
+    private final GameSession gameSession;
+    private final ClientHandler sender;
 
     /**
      * Enum representing the different commands that can be processed.
      */
-    private static enum COMMAND {
-        USER,
+    private enum COMMAND {
         PLACE,
         BOMB,
         MOVE,
@@ -46,97 +45,94 @@ public class Message {
      * @param message The message to be processed.
      */
     public void process(String message) throws IOException {
-        log.info("Received message: {}", message);
-        String[] parts = message.split(" ");
 
         if (!gameSession.isPlayerTurn(sender)) {
             log.warn("Command could not be processed: {}, it is not {}`s turn", message, sender.getUsername());
             return;
         }
 
-        if (parts.length < 1) {
-            log.warn("Invalid command: {}", message);
-            return;
-        }
-
-        String firstPart = parts[0];
         Game game = gameSession.getGame();
 
-        if (firstPart.equalsIgnoreCase(COMMAND.QUIT.name())) {
+        log.info("Received message: {}", message);
+        String[] parts = message.split(" ");
+        if (message.startsWith(COMMAND.PLACE.name())) {
+            handlePlaceCommand(game, parts);
+        } else if (message.startsWith(COMMAND.BOMB.name())) {
+            handleBombCommand(game, parts);
+        } else if (message.startsWith(COMMAND.QUIT.name())) {
             handleQuitCommand();
-        }
-
-        if (firstPart.equalsIgnoreCase(COMMAND.PING.name())) {
-            sender.sendMessage("PONG");
-            log.info("Responded to PING with PONG");
+        } else if (message.startsWith(COMMAND.PING.name())) {
+            handlePingCommand();
         } else {
-            log.warn("Unknown command: {}", firstPart);
+            log.warn("Unknown command: {}", message);
+            sender.sendMessage("FAILURE");
         }
+    }
 
-        if (firstPart.equalsIgnoreCase(COMMAND.BOMB.name())) {
-            if (gameSession.isPlacementPhase()) {
-                log.warn("Command could not be processed: {}, it is placement phase", message);
+    private void handlePlaceCommand(Game game, String[] parts) {
+        if (gameSession.isPlacementPhase()) {
+            if (parts.length != 5) {
+                log.warn("Invalid PLACE command: {}", message);
                 return;
             }
-            if (gameSession.getCurrentPlayer() != gameSession.getOtherPlayer()) {
-                if (parts.length != 3) {
-                    log.warn("Invalid BOMB command: {}", message);
-                    return;
-                }
-                try {
-                    int x = Integer.parseInt(parts[1]);
-                    int y = Integer.parseInt(parts[2]);
-                    String result = game.bomb(x, y);
-                    gameSession.getCurrentPlayer().sendMessage(result);
-                    gameSession.getOtherPlayer().sendMessage(result);
-                    gameSession.switchTurn();
-                } catch (NumberFormatException e) {
-                    log.error("Error processing BOMB command: {}", message, e);
-                }
-            } else {
-                log.warn("Command could not be processed: {}, it is not {}`s turn", message, sender.getUsername());
-            }
-        } else if (firstPart.equalsIgnoreCase(COMMAND.PLACE.name())) {
-            if (gameSession.isPlacementPhase()) {
-                if (parts.length != 5) {
-                    log.warn("Invalid PLACE command: {}", message);
-                    return;
-                }
-                try {
-                    int x = Integer.parseInt(parts[1]);
-                    int y = Integer.parseInt(parts[2]);
-                    try {
-                        int[][] result = ShipShape.valueOf(parts[3]).getShape();
-                    } catch (IllegalArgumentException e) {
-                        log.error("Invalid ship shape: {}", parts[3]);
-                        sender.sendMessage("FAILURE");
-                        return;
-                    }
-                    int[][] shape = ShipShape.valueOf(parts[3]).getShape();
-                    int r = Integer.parseInt(parts[4]);
+            try {
+                int x = Integer.parseInt(parts[1]);
+                int y = Integer.parseInt(parts[2]);
+                int[][] shape = ShipShape.valueOf(parts[3]).getShape();
+                int r = Integer.parseInt(parts[4]);
 
-                    if (!gameSession.canPlaceShip(sender, ShipShape.valueOf(parts[3]))) {
-                        sender.sendMessage("FAILURE");
-                        log.warn("Player {} tried to place more ships of type {} than allowed", sender.toString(), parts[3]);
-                        return;
-                    }
-                    String result = game.place(x, y, shape, r, sender);
-
-                    if (result.equals("SUCCESS")) {
-                        gameSession.incrementShipCount(sender, ShipShape.valueOf(parts[3]));
-                        sender.sendMessage(result);
-                        gameSession.incrementShipsPlaced(sender);
-                        gameSession.switchTurn();
-                    } else {
-                        sender.sendMessage(result);
-                    }
-                } catch (NumberFormatException e) {
-                    log.error("Error processing PLACE command: {}", message, e);
+                if (!gameSession.canPlaceShip(sender, ShipShape.valueOf(parts[3]))) {
                     sender.sendMessage("FAILURE");
+                    log.warn("Player {} tried to place more ships of type {} than allowed", sender.toString(), parts[3]);
+                    return;
                 }
-            } else {
+                String result = game.place(x, y, shape, r, sender);
+
+                if (result.equals("SUCCESS")) {
+                    gameSession.incrementShipCount(sender, ShipShape.valueOf(parts[3]));
+                    gameSession.incrementShipsPlaced(sender);
+                    sender.sendMessage(result);
+                    gameSession.switchTurn();
+                } else {
+                    sender.sendMessage(result);
+                }
+            } catch (NumberFormatException e) {
+                log.error("Error processing PLACE command: {}", message, e);
                 sender.sendMessage("FAILURE");
-                log.warn("Command could not be processed: {}, it is not placement phase", message);
+            }
+        } else {
+            sender.sendMessage("FAILURE");
+            log.warn("Command could not be processed: {}, it is not placement phase", message);
+        }
+    }
+
+    private void handlePingCommand() {
+        sender.sendMessage("PONG");
+        log.info("Responded to PING with PONG");
+    }
+
+    private void handleBombCommand(Game game, String[] parts) {
+        if (gameSession.isPlacementPhase()) {
+            log.warn("Command could not be processed: {}, it is placement phase", message);
+            sender.sendMessage("FAILURE");
+            return;
+        }
+        if (gameSession.getCurrentPlayer() != gameSession.getOtherPlayer()) {
+            if (parts.length != 3) {
+                log.warn("Invalid BOMB command: {}", message);
+                sender.sendMessage("FAILURE");
+                return;
+            }
+            try {
+                int x = Integer.parseInt(parts[1]);
+                int y = Integer.parseInt(parts[2]);
+                String result = game.bomb(x, y);
+                gameSession.getCurrentPlayer().sendMessage(result);
+                gameSession.getOtherPlayer().sendMessage(result);
+                gameSession.switchTurn();
+            } catch (NumberFormatException e) {
+                log.error("Error processing BOMB command: {}", message, e);
+                sender.sendMessage("FAILURE");
             }
         }
     }
@@ -147,7 +143,8 @@ public class Message {
     private void handleQuitCommand() throws IOException {
         if (sender != null) { // Client sent QUIT
             log.info("Client {} is disconnecting.", sender.getUsername());
-            sender.sendMessage("QUIT: Connection closed by client.");
+            sender.sendMessage("QUIT");
+            gameSession.getOtherPlayer().sendMessage("WIN");
             sender.closeConnection();
         } else { // Server sent QUIT
             log.info("Server is shutting down. Notifying all clients.");
