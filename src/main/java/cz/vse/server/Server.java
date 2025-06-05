@@ -117,8 +117,10 @@ public class Server {
 
     public synchronized void removeActiveUser (ClientHandler client) {
         String username = client.getUsername();
+        log.debug("Active users before: {}", activeUsernames);
         if (activeUsernames.remove(username)) {
             log.info("Removed active user: {}", username);
+            log.debug("Active users after: {}", activeUsernames);
         } else {
             log.warn("Attempted to remove non-existent user: {}", username);
         }

@@ -44,22 +44,22 @@ public class Game {
             return "Invalid coordinates for bomb placement";
         } else {
             if (gameSession.isPlayer1Turn())
-                if (listPlayerTwo.get(x).get(y) == 0) {
-                    listPlayerTwo.get(x).set(y, -1);
+                if (listPlayerTwo.get(x-1).get(y-1) == 0) {
+                    listPlayerTwo.get(x-1).set(y-1, -1);
                     checkForWin();
                     return "HIT" + " " + x + " " + y;
                 } else {
-                    listPlayerTwo.get(x).set(y, 2);
+                    listPlayerTwo.get(x-1).set(y-1, 2);
                     log.info(listPlayerTwo.toString());
                     return "MISS" + " " + x + " " + y;
                 }
             else {
-                if (listPlayerOne.get(x).get(y) == 0) {
-                    listPlayerOne.get(x).set(y, -1);
+                if (listPlayerOne.get(x-1).get(y-1) == 0) {
+                    listPlayerOne.get(x-1).set(y-1, -1);
                     checkForWin();
                     return "HIT" + " " + x + " " + y;
                 } else {
-                    listPlayerOne.get(x).set(y, 2);
+                    listPlayerOne.get(x-1).set(y-1, 2);
                     log.info(listPlayerOne.toString());
                     return "MISS" + " " + x + " " + y;
                 }

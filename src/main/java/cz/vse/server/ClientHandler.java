@@ -113,16 +113,12 @@ public class ClientHandler implements Runnable {
         }
         isClosing = true;
 
-        log.info("Client {} OUT closed", this.username);
-        if (isClosing) {
-            return; // Prevent recursive calls
-        }
-        isClosing = true;
         try {
             // Close input stream
             if (in != null) {
                 try {
                     in.close();
+                    log.debug("Closing InputStream for client {}", this.username);
                 } catch (IOException e) {
                     log.error("Error closing input stream for client {}: {}", this.username, e.getMessage());
                 }
@@ -131,21 +127,25 @@ public class ClientHandler implements Runnable {
             // Close output stream
             if (out != null) {
                 out.close();
+                log.debug("Closing OutputStream for client {}", this.username);
             }
 
             // Close socket
             if (socket != null && !socket.isClosed()) {
                 try {
                     socket.close();
+                    log.debug("Closing socket for client {}", this.username);
                 } catch (IOException e) {
                     log.error("Error closing socket for client {}: {}", this.username, e.getMessage());
                 }
             }
 
-            log.info("Connection to client {} was closed", this);
+            // Notify server to remove client
             server.removeActiveUser(this);
+
+            log.info("Connection to client {} was closed", this.username);
         } catch (Exception e) {
-            log.error("Unexe closing connection for client {}: {}", this.username, e.getMessage());
+            log.error("Unexpected error closing connection for client {}: {}", this.username, e.getMessage());
         }
     }
 

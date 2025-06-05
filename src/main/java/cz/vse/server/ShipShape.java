@@ -2,8 +2,8 @@ package cz.vse.server;
 
 public enum ShipShape {
     SIX_SHAPE(new int[][]{
-            {1, 1, 1},
-            {1, 1, 1}
+            {1, 1, 1, 1},
+            {1, 1, 1, 1}
     }),
 
     TWO_SHAPE(new int[][]{
