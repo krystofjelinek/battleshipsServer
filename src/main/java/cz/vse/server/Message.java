@@ -83,7 +83,7 @@ public class Message {
 
                 if (!gameSession.canPlaceShip(sender, ShipShape.valueOf(parts[3]))) {
                     sender.sendMessage("FAILURE");
-                    log.warn("Player {} tried to place more ships of type {} than allowed", sender.toString(), parts[3]);
+                    log.warn("Player {} tried to place more ships of type {} than allowed", sender.getUsername(), parts[3]);
                     return;
                 }
                 String result = game.place(x, y, shape, r, sender);
@@ -92,7 +92,6 @@ public class Message {
                     gameSession.incrementShipCount(sender, ShipShape.valueOf(parts[3]));
                     gameSession.incrementShipsPlaced(sender);
                     sender.sendMessage(result);
-                    gameSession.switchTurn();
                 } else {
                     sender.sendMessage(result);
                 }
