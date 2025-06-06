@@ -92,6 +92,7 @@ public class Message {
                     gameSession.incrementShipCount(sender, ShipShape.valueOf(parts[3]));
                     gameSession.incrementShipsPlaced(sender);
                     sender.sendMessage(result);
+                    gameSession.switchTurn();
                 } else {
                     sender.sendMessage(result);
                 }

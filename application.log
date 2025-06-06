@@ -288,3 +288,220 @@
 2025-06-06 10:15:24.665 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: [user2]
 2025-06-06 10:15:24.665 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
 2025-06-06 10:15:24.665 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-06 11:02:07.302 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-06 11:09:41.357 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-06 11:11:43.582 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@2e5699dc connected to the server
+2025-06-06 11:11:43.588 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
+2025-06-06 11:11:44.655 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@55a04137 connected to the server
+2025-06-06 11:11:46.401 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - User 'user2' logged in successfully
+2025-06-06 11:11:46.407 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-06 11:11:46.407 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-06 11:11:46.408 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-06 11:11:46.408 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-06 11:11:46.408 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-06 11:12:07.938 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-06 11:12:07.941 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-06 11:12:07.942 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:07.942 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:12:09.328 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-06 11:12:09.329 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-06 11:12:09.329 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:09.329 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:12:10.618 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 1 BLOCK_SHAPE 0
+2025-06-06 11:12:10.618 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 0 with rotation 0
+2025-06-06 11:12:10.618 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:10.618 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:12:12.146 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 5 FOUR_SHAPE 0
+2025-06-06 11:12:12.147 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 4 with rotation 0
+2025-06-06 11:12:12.147 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:12.147 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:12:13.112 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 6 5 FOUR_SHAPE 0
+2025-06-06 11:12:13.113 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 5, 4 with rotation 0
+2025-06-06 11:12:13.113 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:13.113 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:12:14.395 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 8 4 TWO_SHAPE 0
+2025-06-06 11:12:14.396 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 7, 3 with rotation 0
+2025-06-06 11:12:14.396 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:14.397 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:12:15.596 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 9 7 TWO_SHAPE 0
+2025-06-06 11:12:15.597 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 8, 6 with rotation 0
+2025-06-06 11:12:15.597 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:15.598 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:12:17.830 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-06 11:12:17.830 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-06 11:12:17.830 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:17.830 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:12:19.112 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 4 4 BLOCK_SHAPE 0
+2025-06-06 11:12:19.113 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 3, 3 with rotation 0
+2025-06-06 11:12:19.113 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:19.113 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:12:20.996 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 4 7 BLOCK_SHAPE 0
+2025-06-06 11:12:20.997 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 3, 6 with rotation 0
+2025-06-06 11:12:20.998 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:20.998 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:12:22.213 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 7 2 FOUR_SHAPE 0
+2025-06-06 11:12:22.216 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 6, 1 with rotation 0
+2025-06-06 11:12:22.216 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:22.216 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:12:23.796 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 9 4 FOUR_SHAPE 0
+2025-06-06 11:12:23.797 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 8, 3 with rotation 0
+2025-06-06 11:12:23.797 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:23.797 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:12:25.112 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 7 8 TWO_SHAPE 0
+2025-06-06 11:12:25.113 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 6, 7 with rotation 0
+2025-06-06 11:12:25.113 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:25.113 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:12:26.329 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 2 8 TWO_SHAPE 0
+2025-06-06 11:12:26.330 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 1, 7 with rotation 0
+2025-06-06 11:12:26.330 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:12:26.331 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:13:22.098 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-06 11:13:22.100 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-06 11:13:22.100 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users before: [user1, user2]
+2025-06-06 11:13:22.100 [pool-1-thread-1] INFO  cz.vse.server.Server - Removed active user: user1
+2025-06-06 11:13:22.100 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users after: [user2]
+2025-06-06 11:13:22.100 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-06 11:13:22.100 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-06 11:13:23.400 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user2
+2025-06-06 11:13:23.401 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user2
+2025-06-06 11:13:23.401 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [user2]
+2025-06-06 11:13:23.401 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: user2
+2025-06-06 11:13:23.401 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: []
+2025-06-06 11:13:23.403 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-06 11:13:23.403 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user2 was closed
+2025-06-06 11:13:29.343 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-06 11:13:38.659 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@74cafe3f connected to the server
+2025-06-06 11:13:39.827 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
+2025-06-06 11:13:40.848 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@167060f0 connected to the server
+2025-06-06 11:13:43.791 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - User 'user2' logged in successfully
+2025-06-06 11:13:43.799 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-06 11:13:43.799 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-06 11:13:43.800 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-06 11:13:43.800 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-06 11:13:43.800 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-06 11:13:56.715 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 9 7 SIX_SHAPE 0
+2025-06-06 11:13:56.718 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 8, 6 with rotation 0
+2025-06-06 11:13:56.719 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:13:56.719 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:14:01.930 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 9 7 SIX_SHAPE 0
+2025-06-06 11:14:01.930 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 8, 6 with rotation 0
+2025-06-06 11:14:01.931 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:14:01.931 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:14:05.862 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 3 5 BLOCK_SHAPE 0
+2025-06-06 11:14:05.863 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 2, 4 with rotation 0
+2025-06-06 11:14:05.864 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:14:05.864 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:14:07.727 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 6 5 BLOCK_SHAPE 0
+2025-06-06 11:14:07.727 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 5, 4 with rotation 0
+2025-06-06 11:14:07.727 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:14:07.727 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:14:09.795 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 10 2 FOUR_SHAPE 0
+2025-06-06 11:14:09.796 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 9, 1 with rotation 0
+2025-06-06 11:14:09.797 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:14:09.797 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:14:17.311 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 9 2 FOUR_SHAPE 0
+2025-06-06 11:14:17.312 [pool-1-thread-2] WARN  cz.vse.server.Game - Invalid placement: Adjacent ship detected at 8, 1
+2025-06-06 11:14:17.313 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user2.
+2025-06-06 11:14:18.862 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 9 FOUR_SHAPE 0
+2025-06-06 11:14:18.862 [pool-1-thread-2] WARN  cz.vse.server.Game - Invalid placement: Ship part out of bounds at 3, 10
+2025-06-06 11:14:18.863 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user2.
+2025-06-06 11:14:20.095 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 4 4 BLOCK_SHAPE 0
+2025-06-06 11:14:20.096 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 3, 3 with rotation 0
+2025-06-06 11:14:20.096 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:14:20.096 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:14:21.728 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 7 4 BLOCK_SHAPE 0
+2025-06-06 11:14:21.729 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 6, 3 with rotation 0
+2025-06-06 11:14:21.729 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:14:21.729 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:14:22.462 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 5 8 FOUR_SHAPE 0
+2025-06-06 11:14:22.463 [pool-1-thread-1] WARN  cz.vse.server.Game - Invalid placement: Ship part out of bounds at 4, 10
+2025-06-06 11:14:22.463 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user1.
+2025-06-06 11:14:23.611 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 9 1 FOUR_SHAPE 0
+2025-06-06 11:14:23.612 [pool-1-thread-1] WARN  cz.vse.server.Game - Invalid placement: Adjacent ship detected at 8, 2
+2025-06-06 11:14:23.612 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user1.
+2025-06-06 11:14:24.578 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 2 4 FOUR_SHAPE 0
+2025-06-06 11:14:24.579 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 1, 3 with rotation 0
+2025-06-06 11:14:24.580 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:14:24.580 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:14:27.261 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 4 8 FOUR_SHAPE 0
+2025-06-06 11:14:27.261 [pool-1-thread-1] WARN  cz.vse.server.Game - Invalid placement: Ship part out of bounds at 3, 10
+2025-06-06 11:14:27.261 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user1.
+2025-06-06 11:16:37.214 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user2
+2025-06-06 11:16:37.215 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user2
+2025-06-06 11:16:37.215 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [user1, user2]
+2025-06-06 11:16:37.216 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: user2
+2025-06-06 11:16:37.216 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: [user1]
+2025-06-06 11:16:37.217 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-06 11:16:37.217 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user2 was closed
+2025-06-06 11:16:38.662 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-06 11:16:38.663 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-06 11:16:38.663 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users before: [user1]
+2025-06-06 11:16:38.663 [pool-1-thread-1] INFO  cz.vse.server.Server - Removed active user: user1
+2025-06-06 11:16:38.663 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users after: []
+2025-06-06 11:16:38.663 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-06 11:16:38.663 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-06 11:16:52.424 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@2790e8cb connected to the server
+2025-06-06 11:16:53.214 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@10fc504b connected to the server
+2025-06-06 11:16:53.216 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
+2025-06-06 11:16:56.687 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - User 'user2' logged in successfully
+2025-06-06 11:16:56.688 [pool-1-thread-1] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-06 11:16:56.688 [pool-1-thread-1] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-06 11:16:56.689 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-06 11:16:56.689 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-06 11:16:56.689 [pool-1-thread-1] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-06 11:17:05.185 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-06 11:17:05.188 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-06 11:17:05.188 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:17:05.189 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:06.243 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-06 11:17:06.243 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-06 11:17:06.244 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:17:06.244 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:07.427 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-06 11:17:07.428 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-06 11:17:07.429 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:17:07.429 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:08.943 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-06 11:17:08.944 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-06 11:17:08.944 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:17:08.944 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:10.710 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 9 BLOCK_SHAPE 0
+2025-06-06 11:17:10.711 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 8 with rotation 0
+2025-06-06 11:17:10.711 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:17:10.711 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:12.060 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 9 BLOCK_SHAPE 0
+2025-06-06 11:17:12.060 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 8 with rotation 0
+2025-06-06 11:17:12.061 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:17:12.061 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:13.460 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 4 3 FOUR_SHAPE 0
+2025-06-06 11:17:13.460 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 3, 2 with rotation 0
+2025-06-06 11:17:13.460 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:17:13.460 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:14.577 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 6 3 FOUR_SHAPE 0
+2025-06-06 11:17:14.578 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 5, 2 with rotation 0
+2025-06-06 11:17:14.578 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:17:14.578 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:15.593 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 8 5 TWO_SHAPE 0
+2025-06-06 11:17:15.594 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 7, 4 with rotation 0
+2025-06-06 11:17:15.594 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:17:15.594 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:17.193 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 9 8 TWO_SHAPE 0
+2025-06-06 11:17:17.194 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 8, 7 with rotation 0
+2025-06-06 11:17:17.194 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-06 11:17:17.194 [pool-1-thread-1] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:19.110 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 3 FOUR_SHAPE 0
+2025-06-06 11:17:19.111 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 2 with rotation 0
+2025-06-06 11:17:19.111 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:17:19.111 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:19.945 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 6 3 FOUR_SHAPE 0
+2025-06-06 11:17:19.946 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 5, 2 with rotation 0
+2025-06-06 11:17:19.946 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:17:19.947 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:21.077 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 5 8 TWO_SHAPE 0
+2025-06-06 11:17:21.077 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 4, 7 with rotation 0
+2025-06-06 11:17:21.077 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:17:21.077 [pool-1-thread-2] ERROR cz.vse.server.GameSession - Cannot switch turn during placement phase
+2025-06-06 11:17:22.176 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 8 7 TWO_SHAPE 0
+2025-06-06 11:17:22.177 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 7, 6 with rotation 0
+2025-06-06 11:17:22.178 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-06 11:17:22.178 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
