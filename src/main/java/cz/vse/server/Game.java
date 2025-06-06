@@ -44,7 +44,10 @@ public class Game {
             return "FAILURE";
         } else {
             if (gameSession.isPlayer1Turn())
-                if (listPlayerTwo.get(x-1).get(y-1) == 0) {
+                if (listPlayerTwo.get(x-1).get(y-1) == 2){
+                    log.warn("Cell already bombed: {}, {}", x, y);
+                    return "FAILURE";
+                } else if (listPlayerTwo.get(x-1).get(y-1) == 0) {
                     listPlayerTwo.get(x-1).set(y-1, -1);
                     checkForWin();
                     return "HIT" + " " + x + " " + y;
@@ -54,7 +57,10 @@ public class Game {
                     return "MISS" + " " + x + " " + y;
                 }
             else {
-                if (listPlayerOne.get(x-1).get(y-1) == 0) {
+                if (listPlayerOne.get(x-1).get(y-1) == 2){
+                    log.warn("Cell already bombed: {}, {}", x, y);
+                    return "FAILURE";
+                } else if (listPlayerOne.get(x-1).get(y-1) == 0) {
                     listPlayerOne.get(x-1).set(y-1, -1);
                     checkForWin();
                     return "HIT" + " " + x + " " + y;

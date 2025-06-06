@@ -68,11 +68,11 @@ public class ClientHandler implements Runnable {
 
                         } else {
                             log.warn("Invalid USER command format: {}", receivedMessage);
-                            sendMessage("ERROR: Invalid USER command format.");
+                            sendMessage("FAILURE");
                         }
                     } else {
                         log.warn("Client not logged in. Message: {} could not be processed", receivedMessage);
-                        sendMessage("ERROR: You must log in first.");
+                        sendMessage("FAILURE");
                     }
                     continue;
                 }
@@ -82,7 +82,7 @@ public class ClientHandler implements Runnable {
                     message.process(receivedMessage);
                 } else {
                     log.warn("Game session not yet started. Message: {} could not be processed", receivedMessage);
-                    sendMessage("ERROR: Game session not started yet.");
+                    sendMessage("FAILURE");
                 }
             }
         } catch (IOException e) {

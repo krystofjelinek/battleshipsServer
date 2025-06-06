@@ -75,7 +75,8 @@ public class GameSession {
      */
     public synchronized void switchTurn() {
         if (placementPhase) {
-            log.error("Cannot switch turn during placement phase");
+            //do not switch turn during placement phase
+            return;
         } else {
             if (this.isPlayer1Turn()) {
                 player1Turn = false;

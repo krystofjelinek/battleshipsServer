@@ -32,14 +32,14 @@ public class Server {
      * @param args Command line arguments
      */
     public static void main(String[] args) {
-        int port = 0;
+        int port = 9091; // Default port
         if (args.length > 0) {
             try {
                 port = Integer.parseInt(args[0]);
                 Server server = new Server(port);
                 server.start();
             } catch (NumberFormatException e) {
-                System.err.println("Invalid port number. Using default port " + port);
+                System.err.println("Invalid port number. Using default port 9091.");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -49,11 +49,12 @@ public class Server {
             Properties properties = new Properties();
             try (FileInputStream input = new FileInputStream("src/main/resources/config.properties")) {
                 properties.load(input);
+                port = Integer.parseInt(properties.getProperty("server.port", "9091")); // Default to 1234 if not specified
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-            int portFromFile = Integer.parseInt(properties.getProperty("server.port", "1234")); // Default to 1234 if not specified
-            Server server = new Server(portFromFile);
+
+            Server server = new Server(port);
             try {
                 server.start();
             } catch (IOException e) {
@@ -77,6 +78,13 @@ public class Server {
                 ClientHandler clientHandler = new ClientHandler(clientSocket, this);
                 threadPool.execute(clientHandler);
             }
+        } catch (IOException e) {
+            log.error("Error starting the server: {}", e.getMessage());
+            throw e;
+        } finally {
+            log.info("Server has stopped listening for connections.");
+            closeAllConnections();
+            running = false;
         }
     }
 
@@ -135,8 +143,7 @@ public class Server {
             client.closeConnection();
         }
         waitingClients.clear();
-
-        // Shut down the thread pool
+        activeUsernames.clear();
         threadPool.shutdown();
         try {
             if (!threadPool.awaitTermination(5, TimeUnit.SECONDS)) {
@@ -145,26 +152,6 @@ public class Server {
         } catch (InterruptedException e) {
             threadPool.shutdownNow();
         }
-
-        log.warn("All connections closed and server shut down.");
-    }
-
-    public synchronized void closeConnection() throws IOException {
-        for (ClientHandler client : waitingClients) {
-            client.closeConnection();
-        }
-        waitingClients.clear();
-
-        // Shut down the thread pool
-        threadPool.shutdown();
-        try {
-            if (!threadPool.awaitTermination(5, TimeUnit.SECONDS)) {
-                threadPool.shutdownNow();
-            }
-        } catch (InterruptedException e) {
-            threadPool.shutdownNow();
-        }
-
         log.warn("All connections closed and server shut down.");
     }
 }

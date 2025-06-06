@@ -505,3 +505,42 @@
 2025-06-06 11:17:22.177 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 7, 6 with rotation 0
 2025-06-06 11:17:22.178 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
 2025-06-06 11:17:22.178 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-06 11:21:07.768 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-06 11:21:07.770 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-06 11:21:07.770 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [user1, user2]
+2025-06-06 11:21:07.771 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: user1
+2025-06-06 11:21:07.771 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: [user2]
+2025-06-06 11:21:07.771 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user1.
+2025-06-06 11:21:07.771 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-06 11:21:48.765 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user2
+2025-06-06 11:21:48.768 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user2
+2025-06-06 11:21:48.769 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users before: [user2]
+2025-06-06 11:21:48.770 [pool-1-thread-1] INFO  cz.vse.server.Server - Removed active user: user2
+2025-06-06 11:21:48.771 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users after: []
+2025-06-06 11:21:48.771 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user1.
+2025-06-06 11:21:48.771 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user2 was closed
+2025-06-06 11:22:01.631 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@408c100 connected to the server
+2025-06-06 11:22:03.199 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@2f157447 connected to the server
+2025-06-06 11:22:03.212 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
+2025-06-06 11:22:07.565 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - User 'user2' logged in successfully
+2025-06-06 11:22:07.568 [pool-1-thread-1] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-06 11:22:07.568 [pool-1-thread-1] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-06 11:22:07.569 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-06 11:22:07.569 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-06 11:22:07.569 [pool-1-thread-1] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-06 11:22:18.584 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user2
+2025-06-06 11:22:18.588 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user2
+2025-06-06 11:22:18.588 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users before: [user1, user2]
+2025-06-06 11:22:18.588 [pool-1-thread-1] INFO  cz.vse.server.Server - Removed active user: user2
+2025-06-06 11:22:18.588 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users after: [user1]
+2025-06-06 11:22:18.588 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-06 11:22:18.588 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user2 was closed
+2025-06-06 11:23:10.376 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-06 11:23:10.377 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-06 11:23:10.377 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [user1]
+2025-06-06 11:23:10.378 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: user1
+2025-06-06 11:23:10.378 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: []
+2025-06-06 11:23:10.378 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-06 11:23:10.378 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-06 16:46:48.220 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-06 18:31:13.609 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
