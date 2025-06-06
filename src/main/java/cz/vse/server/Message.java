@@ -144,7 +144,7 @@ public class Message {
         if (sender != null) { // Client sent QUIT
             log.info("Client {} is disconnecting.", sender.getUsername());
             sender.sendMessage("QUIT");
-            gameSession.getOtherPlayer().sendMessage("WIN");
+            gameSession.getOtherPlayerInSession(sender).sendMessage("WIN");
             sender.closeConnection();
         } else { // Server sent QUIT
             log.info("Server is shutting down. Notifying all clients.");

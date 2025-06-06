@@ -139,6 +139,14 @@ public class GameSession {
         return player1Turn ? player2 : player1;
     }
 
+    public ClientHandler getOtherPlayerInSession(ClientHandler player) {
+        if (player == player1) {
+            return player2;
+        } else {
+            return player1;
+        }
+    }
+
     /**
      * Starts the game session by notifying both players that they are ready.
      * This method is called after both players have placed their ships.

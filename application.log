@@ -1137,3 +1137,97 @@
 2025-06-06 18:45:52.784 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users after: []
 2025-06-06 18:45:52.784 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: adam.
 2025-06-06 18:45:52.784 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client krystof was closed
+2025-06-06 18:47:59.167 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@2be53ea8 connected to the server
+2025-06-06 18:47:59.169 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - User 'krystof' logged in successfully
+2025-06-06 18:48:03.848 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@30e54f37 connected to the server
+2025-06-06 18:48:03.849 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - User 'adam' logged in successfully
+2025-06-06 18:48:03.850 [pool-1-thread-4] INFO  cz.vse.server.Server - krystof has been assigned to the game session
+2025-06-06 18:48:03.850 [pool-1-thread-4] INFO  cz.vse.server.Server - adam has been assigned to the game session
+2025-06-06 18:48:03.850 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: krystof.
+2025-06-06 18:48:03.850 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: adam.
+2025-06-06 18:48:03.850 [pool-1-thread-4] INFO  cz.vse.server.Server - Game session started between krystof and adam
+2025-06-06 18:48:30.329 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-06 18:48:30.330 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-06 18:48:30.330 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: krystof.
+2025-06-06 18:48:32.641 [pool-1-thread-4] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-06 18:48:32.642 [pool-1-thread-4] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-06 18:48:32.642 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: adam.
+2025-06-06 18:48:33.338 [pool-1-thread-4] INFO  cz.vse.server.Message - Received message: PLACE 1 1 BLOCK_SHAPE 0
+2025-06-06 18:48:33.338 [pool-1-thread-4] WARN  cz.vse.server.Game - Invalid placement: Overlap detected at 0, 0
+2025-06-06 18:48:33.339 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: adam.
+2025-06-06 18:48:34.721 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-06 18:48:34.721 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-06 18:48:34.722 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: krystof.
+2025-06-06 18:48:35.737 [pool-1-thread-4] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-06 18:48:35.738 [pool-1-thread-4] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-06 18:48:35.738 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: adam.
+2025-06-06 18:48:37.420 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 1 9 BLOCK_SHAPE 0
+2025-06-06 18:48:37.421 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 0, 8 with rotation 0
+2025-06-06 18:48:37.421 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: krystof.
+2025-06-06 18:48:38.870 [pool-1-thread-4] INFO  cz.vse.server.Message - Received message: PLACE 1 9 BLOCK_SHAPE 0
+2025-06-06 18:48:38.870 [pool-1-thread-4] INFO  cz.vse.server.Game - Ship placed successfully at 0, 8 with rotation 0
+2025-06-06 18:48:38.871 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: adam.
+2025-06-06 18:48:40.803 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 4 1 FOUR_SHAPE 0
+2025-06-06 18:48:40.804 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 3, 0 with rotation 0
+2025-06-06 18:48:40.804 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: krystof.
+2025-06-06 18:48:42.303 [pool-1-thread-4] INFO  cz.vse.server.Message - Received message: PLACE 4 1 FOUR_SHAPE 0
+2025-06-06 18:48:42.303 [pool-1-thread-4] INFO  cz.vse.server.Game - Ship placed successfully at 3, 0 with rotation 0
+2025-06-06 18:48:42.303 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: adam.
+2025-06-06 18:48:43.638 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 4 6 FOUR_SHAPE 0
+2025-06-06 18:48:43.639 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 3, 5 with rotation 0
+2025-06-06 18:48:43.639 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: krystof.
+2025-06-06 18:48:45.038 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 6 1 TWO_SHAPE 0
+2025-06-06 18:48:45.038 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 5, 0 with rotation 0
+2025-06-06 18:48:45.039 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: krystof.
+2025-06-06 18:48:46.138 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 6 4 TWO_SHAPE 0
+2025-06-06 18:48:46.138 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 5, 3 with rotation 0
+2025-06-06 18:48:46.138 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: krystof.
+2025-06-06 18:48:48.674 [pool-1-thread-4] INFO  cz.vse.server.Message - Received message: PLACE 4 6 FOUR_SHAPE 0
+2025-06-06 18:48:48.674 [pool-1-thread-4] INFO  cz.vse.server.Game - Ship placed successfully at 3, 5 with rotation 0
+2025-06-06 18:48:48.674 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: adam.
+2025-06-06 18:48:49.720 [pool-1-thread-4] INFO  cz.vse.server.Message - Received message: PLACE 6 3 TWO_SHAPE 0
+2025-06-06 18:48:49.721 [pool-1-thread-4] INFO  cz.vse.server.Game - Ship placed successfully at 5, 2 with rotation 0
+2025-06-06 18:48:49.721 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: adam.
+2025-06-06 18:48:50.870 [pool-1-thread-4] INFO  cz.vse.server.Message - Received message: PLACE 6 6 TWO_SHAPE 0
+2025-06-06 18:48:50.871 [pool-1-thread-4] INFO  cz.vse.server.Game - Ship placed successfully at 5, 5 with rotation 0
+2025-06-06 18:48:50.871 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: adam.
+2025-06-06 18:48:50.872 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: adam.
+2025-06-06 18:51:10.576 [pool-1-thread-3] WARN  cz.vse.server.Message - Command could not be processed: BOMB 1 1, it is not krystof`s turn
+2025-06-06 18:51:13.675 [pool-1-thread-4] INFO  cz.vse.server.Message - Received message: BOMB 1 1
+2025-06-06 18:51:13.677 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: adam.
+2025-06-06 18:51:13.677 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: krystof.
+2025-06-06 18:51:13.677 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: krystof.
+2025-06-06 18:51:34.743 [pool-1-thread-4] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client adam
+2025-06-06 18:51:34.744 [pool-1-thread-4] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client adam
+2025-06-06 18:51:34.744 [pool-1-thread-4] DEBUG cz.vse.server.Server - Active users before: [adam, krystof]
+2025-06-06 18:51:34.744 [pool-1-thread-4] INFO  cz.vse.server.Server - Removed active user: adam
+2025-06-06 18:51:34.744 [pool-1-thread-4] DEBUG cz.vse.server.Server - Active users after: [krystof]
+2025-06-06 18:51:34.744 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: adam.
+2025-06-06 18:51:34.744 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Connection to client adam was closed
+2025-06-06 18:57:24.947 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-06 18:57:55.136 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@4ccd0047 connected to the server
+2025-06-06 18:57:55.140 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - User 'adam' logged in successfully
+2025-06-06 18:58:03.567 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@6c2e708f connected to the server
+2025-06-06 18:58:03.568 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - User 'krystof' logged in successfully
+2025-06-06 18:58:03.572 [pool-1-thread-2] INFO  cz.vse.server.Server - adam has been assigned to the game session
+2025-06-06 18:58:03.572 [pool-1-thread-2] INFO  cz.vse.server.Server - krystof has been assigned to the game session
+2025-06-06 18:58:03.572 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: adam.
+2025-06-06 18:58:03.572 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: krystof.
+2025-06-06 18:58:03.572 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between adam and krystof
+2025-06-06 18:58:10.394 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-06 18:58:10.396 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-06 18:58:10.397 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: krystof.
+2025-06-06 18:58:18.293 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client krystof
+2025-06-06 18:58:18.295 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client krystof
+2025-06-06 18:58:18.295 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [adam, krystof]
+2025-06-06 18:58:18.295 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: krystof
+2025-06-06 18:58:18.295 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: [adam]
+2025-06-06 18:58:18.295 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: adam.
+2025-06-06 18:58:18.295 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client krystof was closed
+2025-06-06 18:58:25.752 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client adam
+2025-06-06 18:58:25.753 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client adam
+2025-06-06 18:58:25.753 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users before: [adam]
+2025-06-06 18:58:25.753 [pool-1-thread-1] INFO  cz.vse.server.Server - Removed active user: adam
+2025-06-06 18:58:25.753 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users after: []
+2025-06-06 18:58:25.753 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: krystof.
+2025-06-06 18:58:25.754 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client adam was closed
