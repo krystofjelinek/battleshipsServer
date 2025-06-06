@@ -214,7 +214,7 @@ public class Game {
         boolean player2AllSunk = true;
         for (List<Integer> row : listPlayerTwo) {
             for (Integer cell : row) {
-                if (cell == 1) { // Ship part not sunk
+                if (cell == 0) { // Ship part not sunk
                     player2AllSunk = false;
                     break;
                 }
@@ -224,7 +224,7 @@ public class Game {
         boolean player1AllSunk = true;
         for (List<Integer> row : listPlayerOne) {
             for (Integer cell : row) {
-                if (cell == 1) { // Ship part not sunk
+                if (cell == 0) { // Ship part not sunk
                     player1AllSunk = false;
                     break;
                 }
