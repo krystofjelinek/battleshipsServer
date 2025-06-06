@@ -39,9 +39,9 @@ public class Game {
      * @return a string indicating the result of the bombing (HIT or MISS)
      */
     public String bomb(int x, int y) {
-        if ((x < 0 || x > 9) || (y < 0 || y > 9)) {
+        if ((x-1 < 0 || x-1 > 9) || (y-1 < 0 || y-1 > 9)) {
             log.error("Invalid coordinates for bomb placement: {}, {}", x, y);
-            return "Invalid coordinates for bomb placement";
+            return "FAILURE";
         } else {
             if (gameSession.isPlayer1Turn())
                 if (listPlayerTwo.get(x-1).get(y-1) == 0) {

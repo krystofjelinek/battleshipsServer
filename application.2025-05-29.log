@@ -1,0 +1,12 @@
+2025-05-29 21:52:16.207 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 1234
+2025-05-29 21:52:30.264 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@598e9ff connected to the server
+2025-05-29 21:52:33.040 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@4340946c connected to the server
+2025-05-29 21:52:39.243 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client logged in with username: krystof
+2025-05-29 21:52:39.244 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: krystof.
+2025-05-29 21:52:44.315 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client logged in with username: adam
+2025-05-29 21:52:44.318 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: adam.
+2025-05-29 21:52:44.325 [pool-1-thread-1] INFO  cz.vse.server.Server - krystof has been assigned to the game session
+2025-05-29 21:52:44.326 [pool-1-thread-1] INFO  cz.vse.server.Server - adam has been assigned to the game session
+2025-05-29 21:52:44.326 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: Game started! You are Player 1. to client: krystof.
+2025-05-29 21:52:44.326 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: Game started! You are Player 2. to client: adam.
+2025-05-29 21:52:44.327 [pool-1-thread-1] INFO  cz.vse.server.Server - Game session started between krystof and adam

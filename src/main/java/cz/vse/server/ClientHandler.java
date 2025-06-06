@@ -142,6 +142,7 @@ public class ClientHandler implements Runnable {
 
             // Notify server to remove client
             server.removeActiveUser(this);
+            gameSession.getOtherPlayer().sendMessage("WIN");
 
             log.info("Connection to client {} was closed", this.username);
         } catch (Exception e) {

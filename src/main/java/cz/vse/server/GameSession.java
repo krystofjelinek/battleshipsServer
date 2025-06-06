@@ -158,6 +158,13 @@ public class GameSession {
         return  player2;
     }
 
+
+    /**
+     * Notifies both players with a message.
+     * This method is used to send messages to both players during the game.
+     *
+     * @param s The message to be sent to both players
+     */
     public void notifyAllClients(String s) {
         player1.sendMessage(s);
         player2.sendMessage(s);
