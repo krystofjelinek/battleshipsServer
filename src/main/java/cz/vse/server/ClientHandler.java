@@ -6,6 +6,9 @@ import org.slf4j.LoggerFactory;
 import java.io.*;
 import java.net.*;
 
+/**
+ * This class handles communication with a connected client.
+ */
 public class ClientHandler implements Runnable {
     private final Socket socket;
     private final Server server;
@@ -41,6 +44,7 @@ public class ClientHandler implements Runnable {
     public void setLoggedIn(boolean loggedIn) {
         this.loggedIn = loggedIn;
     }
+
 
     @Override
     public void run() {
@@ -95,6 +99,10 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    /**
+     * Sends a message to the client.
+     * @param message
+     */
     public void sendMessage(String message) {
         out.println(message);
         if (isLoggedIn()) {
@@ -104,7 +112,13 @@ public class ClientHandler implements Runnable {
         }
     }
 
-
+    /**
+     * Closes the connection to the client.
+     * This method ensures that all resources are properly released and the connection is closed correctly.
+     *
+     * @param LoggedIn Indicates if the client was logged in before closing the connection
+     * @throws IOException If an I/O error occurs while closing the connection
+     */
     public void closeConnection(boolean LoggedIn) throws IOException {
         if (isClosing) {
             log.info("Connection for client {} is already closing", this.username);
