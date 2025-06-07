@@ -82,3 +82,80 @@
 2025-06-07 09:38:33.244 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users after: []
 2025-06-07 09:38:33.245 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
 2025-06-07 09:38:33.245 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 09:59:16.304 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 10:51:26.612 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 10:52:01.185 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@4cc5f1a4 connected to the server
+2025-06-07 10:52:01.189 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
+2025-06-07 10:52:06.639 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@26097b55 connected to the server
+2025-06-07 10:52:06.641 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - User 'user2' logged in successfully
+2025-06-07 10:52:06.649 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 10:52:06.650 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 10:52:06.650 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 10:52:06.650 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 10:52:06.650 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 10:52:11.048 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@6a33a2c2 connected to the server
+2025-06-07 10:52:11.049 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - User 'user3' logged in successfully
+2025-06-07 10:52:15.300 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@15230821 connected to the server
+2025-06-07 10:52:15.302 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - User 'user4' logged in successfully
+2025-06-07 10:52:15.302 [pool-1-thread-4] INFO  cz.vse.server.Server - user3 has been assigned to the game session
+2025-06-07 10:52:15.302 [pool-1-thread-4] INFO  cz.vse.server.Server - user4 has been assigned to the game session
+2025-06-07 10:52:15.302 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user3.
+2025-06-07 10:52:15.302 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user4.
+2025-06-07 10:52:15.302 [pool-1-thread-4] INFO  cz.vse.server.Server - Game session started between user3 and user4
+2025-06-07 10:52:19.845 [pool-1-thread-5] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@723b9d8d connected to the server
+2025-06-07 10:52:19.847 [pool-1-thread-5] INFO  cz.vse.server.ClientHandler - User 'user5' logged in successfully
+2025-06-07 10:52:25.254 [pool-1-thread-6] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@14c5dd53 connected to the server
+2025-06-07 10:52:25.256 [pool-1-thread-6] INFO  cz.vse.server.ClientHandler - User 'user6' logged in successfully
+2025-06-07 10:52:25.256 [pool-1-thread-6] INFO  cz.vse.server.Server - user5 has been assigned to the game session
+2025-06-07 10:52:25.256 [pool-1-thread-6] INFO  cz.vse.server.Server - user6 has been assigned to the game session
+2025-06-07 10:52:25.257 [pool-1-thread-6] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user5.
+2025-06-07 10:52:25.257 [pool-1-thread-6] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user6.
+2025-06-07 10:52:25.257 [pool-1-thread-6] INFO  cz.vse.server.Server - Game session started between user5 and user6
+2025-06-07 10:52:30.991 [pool-1-thread-7] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@7484bba9 connected to the server
+2025-06-07 10:52:30.995 [pool-1-thread-7] INFO  cz.vse.server.ClientHandler - User 'user7' logged in successfully
+2025-06-07 10:52:36.170 [pool-1-thread-8] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@5dfc1470 connected to the server
+2025-06-07 10:52:36.171 [pool-1-thread-8] INFO  cz.vse.server.ClientHandler - User 'user8' logged in successfully
+2025-06-07 10:52:36.172 [pool-1-thread-8] INFO  cz.vse.server.Server - user7 has been assigned to the game session
+2025-06-07 10:52:36.172 [pool-1-thread-8] INFO  cz.vse.server.Server - user8 has been assigned to the game session
+2025-06-07 10:52:36.172 [pool-1-thread-8] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user7.
+2025-06-07 10:52:36.172 [pool-1-thread-8] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user8.
+2025-06-07 10:52:36.172 [pool-1-thread-8] INFO  cz.vse.server.Server - Game session started between user7 and user8
+2025-06-07 10:52:41.021 [pool-1-thread-9] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@32599d52 connected to the server
+2025-06-07 10:52:41.022 [pool-1-thread-9] INFO  cz.vse.server.ClientHandler - User 'user9' logged in successfully
+2025-06-07 10:52:46.104 [pool-1-thread-10] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@50dcc29f connected to the server
+2025-06-07 10:52:46.107 [pool-1-thread-10] INFO  cz.vse.server.ClientHandler - User 'user10' logged in successfully
+2025-06-07 10:52:46.107 [pool-1-thread-10] INFO  cz.vse.server.Server - user9 has been assigned to the game session
+2025-06-07 10:52:46.107 [pool-1-thread-10] INFO  cz.vse.server.Server - user10 has been assigned to the game session
+2025-06-07 10:52:46.107 [pool-1-thread-10] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user9.
+2025-06-07 10:52:46.107 [pool-1-thread-10] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user10.
+2025-06-07 10:52:46.107 [pool-1-thread-10] INFO  cz.vse.server.Server - Game session started between user9 and user10
+2025-06-07 10:52:50.811 [pool-1-thread-11] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@3990fbdc connected to the server
+2025-06-07 10:52:50.824 [pool-1-thread-11] INFO  cz.vse.server.ClientHandler - User 'user11' logged in successfully
+2025-06-07 10:52:56.801 [pool-1-thread-12] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@7d57d116 connected to the server
+2025-06-07 10:52:56.802 [pool-1-thread-12] INFO  cz.vse.server.ClientHandler - User 'user12' logged in successfully
+2025-06-07 10:52:56.802 [pool-1-thread-12] INFO  cz.vse.server.Server - user11 has been assigned to the game session
+2025-06-07 10:52:56.802 [pool-1-thread-12] INFO  cz.vse.server.Server - user12 has been assigned to the game session
+2025-06-07 10:52:56.802 [pool-1-thread-12] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user11.
+2025-06-07 10:52:56.802 [pool-1-thread-12] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user12.
+2025-06-07 10:52:56.802 [pool-1-thread-12] INFO  cz.vse.server.Server - Game session started between user11 and user12
+2025-06-07 10:53:01.180 [pool-1-thread-13] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@47e8943c connected to the server
+2025-06-07 10:53:01.181 [pool-1-thread-13] INFO  cz.vse.server.ClientHandler - User 'user13' logged in successfully
+2025-06-07 10:53:36.717 [pool-1-thread-14] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@70bb9220 connected to the server
+2025-06-07 10:53:36.718 [pool-1-thread-14] INFO  cz.vse.server.ClientHandler - User 'user13' logged in successfully
+2025-06-07 10:53:36.718 [pool-1-thread-14] WARN  cz.vse.server.Server - Username 'user13' is already in use. Rejecting client connection.
+2025-06-07 10:53:36.718 [pool-1-thread-14] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user13.
+2025-06-07 10:53:36.720 [pool-1-thread-14] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user13
+2025-06-07 10:53:36.720 [pool-1-thread-14] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user13
+2025-06-07 10:53:36.720 [pool-1-thread-14] DEBUG cz.vse.server.Server - Active users before: [user1, user11, user2, user10, user13, user12, user9, user7, user8, user5, user6, user3, user4]
+2025-06-07 10:53:36.720 [pool-1-thread-14] INFO  cz.vse.server.Server - Removed active user: user13
+2025-06-07 10:53:36.720 [pool-1-thread-14] DEBUG cz.vse.server.Server - Active users after: [user1, user11, user2, user10, user12, user9, user7, user8, user5, user6, user3, user4]
+2025-06-07 10:53:36.720 [pool-1-thread-14] ERROR cz.vse.server.ClientHandler - Unexpected error closing connection for client user13: Cannot invoke "cz.vse.server.GameSession.getOtherPlayerInSession(cz.vse.server.ClientHandler)" because "this.gameSession" is null
+2025-06-07 10:53:36.721 [pool-1-thread-14] INFO  cz.vse.server.ClientHandler - Connection for client user13 is already closing
+2025-06-07 11:04:27.389 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 11:05:29.237 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@19cd74dc connected to the server
+2025-06-07 11:05:40.370 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@4173c460 connected to the server
+2025-06-07 11:07:19.564 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 11:09:24.322 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 11:09:47.418 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@184321ae connected to the server
+2025-06-07 11:10:01.248 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@146a14ff connected to the server
+2025-06-07 11:10:31.446 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091

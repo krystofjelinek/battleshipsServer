@@ -31,8 +31,8 @@ public class Server {
      * It accepts a port number as an argument; if not provided, it takes the port number from config.properties file.
      * @param args Command line arguments
      */
-    public static void main(String[] args) {
-        int port = 9091; // Default port
+    public static void main(String[] args) throws IOException {
+        int port = 0; // Default port
         if (args.length > 0) {
             try {
                 port = Integer.parseInt(args[0]);
@@ -45,14 +45,16 @@ public class Server {
             }
         }
 
-        if (args.length == 0 || port <= 0) {
-            Properties properties = new Properties();
-            try (FileInputStream input = new FileInputStream("src/main/resources/config.properties")) {
-                properties.load(input);
-                port = Integer.parseInt(properties.getProperty("server.port", "9091")); // Default to 1234 if not specified
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
+        if (args.length == 0) {
+            InputStream config = Server.class.getClassLoader().getResourceAsStream("config.properties");
+            if (config == null) {
+                throw new RuntimeException("Failed to load config.properties");
             }
+
+            Properties properties = new Properties();
+            properties.load(config);
+            port = Integer.parseInt(properties.getProperty("server.port", "9091"));
+            config.close();
 
             Server server = new Server(port);
             try {
