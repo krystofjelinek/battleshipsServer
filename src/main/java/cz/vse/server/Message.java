@@ -104,7 +104,6 @@ public class Message {
                     return;
                 }
                 String result = game.place(x, y, shape, r, sender);
-//TODO neposilam WIN kdyz se klient odpoji neocekavane
                 if (result.equals("SUCCESS")) {
                     gameSession.incrementShipCount(sender, ShipShape.valueOf(parts[3]));
                     gameSession.incrementShipsPlaced(sender);
@@ -169,7 +168,6 @@ public class Message {
     /**
      * Handles the QUIT command.
      */
-    //TODO kdyz klient vyhraje tak se odesle QUIT, a ja poslu poslu znovu WIN
     private void handleQuitCommand() throws IOException {
         if (sender != null) {
             log.info("Client {} is disconnecting.", sender.getUsername());
