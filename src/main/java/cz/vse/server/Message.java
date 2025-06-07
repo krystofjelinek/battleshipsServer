@@ -164,7 +164,7 @@ public class Message {
             log.info("Client {} is disconnecting.", sender.getUsername());
             sender.sendMessage("QUIT");
             gameSession.getOtherPlayerInSession(sender).sendMessage("WIN");
-            sender.closeConnection();
+            sender.closeConnection(true);
         }
     }
 }

@@ -100,7 +100,7 @@ public class Server {
         if (activeUsernames.contains(username)) {
             log.warn("Username '{}' is already in use. Rejecting client connection.", username);
             client.sendMessage("QUIT");
-            client.closeConnection();
+            client.closeConnection(false);
             return;
         }
 
@@ -142,7 +142,7 @@ public class Server {
      */
     public synchronized void closeAllConnections() throws IOException {
         for (ClientHandler client : waitingClients) {
-            client.closeConnection();
+            client.closeConnection(false);
         }
         waitingClients.clear();
         activeUsernames.clear();

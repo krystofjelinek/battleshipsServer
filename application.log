@@ -159,3 +159,36 @@
 2025-06-07 11:09:47.418 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@184321ae connected to the server
 2025-06-07 11:10:01.248 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@146a14ff connected to the server
 2025-06-07 11:10:31.446 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 11:26:22.444 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 11:34:29.378 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 11:34:56.548 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@7d11cf91 connected to the server
+2025-06-07 11:34:56.549 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
+2025-06-07 11:35:06.012 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@2e889272 connected to the server
+2025-06-07 11:35:06.016 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
+2025-06-07 11:35:06.016 [pool-1-thread-2] WARN  cz.vse.server.Server - Username 'user1' is already in use. Rejecting client connection.
+2025-06-07 11:35:06.016 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user1.
+2025-06-07 11:35:06.016 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 11:35:06.016 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 11:35:06.017 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [user1]
+2025-06-07 11:35:06.017 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: user1
+2025-06-07 11:35:06.017 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: []
+2025-06-07 11:35:06.019 [pool-1-thread-2] ERROR cz.vse.server.ClientHandler - Unexpected error closing connection for client user1: Cannot invoke "cz.vse.server.GameSession.getOtherPlayerInSession(cz.vse.server.ClientHandler)" because "this.gameSession" is null
+2025-06-07 11:35:06.019 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection for client user1 is already closing
+2025-06-07 11:39:33.296 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 11:39:57.931 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@1ab9e56e connected to the server
+2025-06-07 11:39:57.933 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
+2025-06-07 11:40:05.938 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@7e6d32ee connected to the server
+2025-06-07 11:40:05.939 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
+2025-06-07 11:40:05.940 [pool-1-thread-2] WARN  cz.vse.server.Server - Username 'user1' is already in use. Rejecting client connection.
+2025-06-07 11:40:05.940 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user1.
+2025-06-07 11:40:05.940 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 11:40:05.940 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 11:40:05.940 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 11:40:05.940 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection for client user1 is already closing
+2025-06-07 11:41:18.017 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@3b53ff5d connected to the server
+2025-06-07 11:41:18.019 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - User 'user2' logged in successfully
+2025-06-07 11:41:18.022 [pool-1-thread-3] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 11:41:18.022 [pool-1-thread-3] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 11:41:18.022 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 11:41:18.022 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 11:41:18.022 [pool-1-thread-3] INFO  cz.vse.server.Server - Game session started between user1 and user2

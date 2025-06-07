@@ -89,7 +89,7 @@ public class ClientHandler implements Runnable {
             log.warn("Client {} disconnected unexpectedly: {}", this.username, e.getMessage());
         } finally {
             try {
-                closeConnection();
+                closeConnection(false);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -106,7 +106,7 @@ public class ClientHandler implements Runnable {
     }
 
 
-    public void closeConnection() throws IOException {
+    public void closeConnection(boolean LoggedIn) throws IOException {
         if (isClosing) {
             log.info("Connection for client {} is already closing", this.username);
             return; // Prevent recursive calls
@@ -140,9 +140,12 @@ public class ClientHandler implements Runnable {
                 }
             }
 
-            // Notify server to remove client
-            server.removeActiveUser(this);
-            gameSession.getOtherPlayerInSession(this).sendMessage("WIN");
+            if (LoggedIn){
+                // Notify server to remove client
+                server.removeActiveUser(this);
+                gameSession.getOtherPlayerInSession(this).sendMessage("WIN");
+            }
+
 
             log.info("Connection to client {} was closed", this.username);
         } catch (Exception e) {
