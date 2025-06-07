@@ -53,7 +53,6 @@ public class Game {
                     return "HIT" + " " + x + " " + y;
                 } else {
                     listPlayerTwo.get(x-1).set(y-1, 2);
-                    log.info(listPlayerTwo.toString());
                     return "MISS" + " " + x + " " + y;
                 }
             else {
@@ -66,7 +65,6 @@ public class Game {
                     return "HIT" + " " + x + " " + y;
                 } else {
                     listPlayerOne.get(x-1).set(y-1, 2);
-                    log.info(listPlayerOne.toString());
                     return "MISS" + " " + x + " " + y;
                 }
             }
@@ -85,35 +83,16 @@ public class Game {
         int cols = shape[0].length;
         int[][] rotatedShape;
 
-        switch (rotation) {
-            case 1: // 90 degrees clockwise
-                rotatedShape = new int[cols][rows];
-                for (int i = 0; i < rows; i++) {
-                    for (int j = 0; j < cols; j++) {
-                        rotatedShape[j][rows - 1 - i] = shape[i][j];
-                    }
+        if (rotation == 1) { // 90 degrees clockwise
+            rotatedShape = new int[cols][rows];
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < cols; j++) {
+                    rotatedShape[j][rows - 1 - i] = shape[i][j];
                 }
-                break;
-            case 2: // 180 degrees
-                rotatedShape = new int[rows][cols];
-                for (int i = 0; i < rows; i++) {
-                    for (int j = 0; j < cols; j++) {
-                        rotatedShape[rows - 1 - i][cols - 1 - j] = shape[i][j];
-                    }
-                }
-                break;
-            case 3: // 270 degrees clockwise
-                rotatedShape = new int[cols][rows];
-                for (int i = 0; i < rows; i++) {
-                    for (int j = 0; j < cols; j++) {
-                        rotatedShape[cols - 1 - j][i] = shape[i][j];
-                    }
-                }
-                break;
-            default: // 0 degrees (no rotation)
-                rotatedShape = shape;
+            }
+        } else {
+            rotatedShape = shape;
         }
-
         return rotatedShape;
     }
 
@@ -124,7 +103,6 @@ public class Game {
      * @param y y coordinate
      * @param playerMap the grid of the player
      * @return true if the ship can be placed, false otherwise
-     * @note This part of code is AI generated
      */
     private boolean isAdjacentCellOccupied(List<List<Integer>> playerMap, int x, int y) {
         int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1};
@@ -154,10 +132,10 @@ public class Game {
      * @return a string indicating the result of the placement (success or failure)
      */
     public String place(int x, int y, int[][] shape, int rotation, ClientHandler sender) {
-        // Rotate the shape based on the rotation parameter
+
         int[][] rotatedShape = rotateShape(shape, rotation);
-        x = x - 1; // Adjust for 0-based indexing
-        y = y - 1; // Adjust for 0-based indexing
+        x = x - 1; // Adjust for 0-based indexing, client uses 1-based indexing
+        y = y - 1; // Adjust for 0-based indexing, client uses 1-based indexing
 
         List<List<Integer>> playerMap = sender == gameSession.getPlayer1() ? listPlayerOne : listPlayerTwo;
 
@@ -190,10 +168,10 @@ public class Game {
         }
 
         // Place the ship
-        for (int i = 0; i < rotatedShape.length; i++) { // Iterate through the rows of the rotated shape
-            for (int j = 0; j < rotatedShape[i].length; j++) { // Iterate through the columns of the rotated shape
-                if (rotatedShape[i][j] == 1) { // Part of the ship
-                    playerMap.get(x + i).set(y + j, 0); // Mark the cell as occupied by the ship
+        for (int i = 0; i < rotatedShape.length; i++) {
+            for (int j = 0; j < rotatedShape[i].length; j++) {
+                if (rotatedShape[i][j] == 1) {
+                    playerMap.get(x + i).set(y + j, 0);
                 }
             }
         }

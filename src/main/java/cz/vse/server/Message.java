@@ -64,15 +64,23 @@ public class Message {
         } else if (message.startsWith(COMMAND.PING.name())) {
             handlePingCommand();
         } else {
-            log.warn("Unknown command: {}", message);
+            log.warn("Unknown command recieved: `{}` from {} ", message, sender.getUsername());
             sender.sendMessage("FAILURE");
         }
     }
 
+    /**
+     * Handles the PLACE command.
+     * Validates the command and places a ship in the game if the command is valid.
+     *
+     * @param game  The current game instance.
+     * @param parts The parts of the command split by spaces.
+     */
     private void handlePlaceCommand(Game game, String[] parts) {
         if (gameSession.isPlacementPhase()) {
             if (parts.length != 5) {
                 log.warn("Invalid PLACE command: {}", message);
+                sender.sendMessage("FAILURE");
                 return;
             }
             try {
@@ -106,11 +114,22 @@ public class Message {
         }
     }
 
+    /**
+     * Handles the PING command.
+     * Responds with a PONG message to the client.
+     */
     private void handlePingCommand() {
         sender.sendMessage("PONG");
         log.info("Responded to PING with PONG");
     }
 
+    /**
+     * Handles the BOMB command.
+     * Validates the command and executes the bombing action in the game.
+     *
+     * @param game  The current game instance.
+     * @param parts The parts of the command split by spaces.
+     */
     private void handleBombCommand(Game game, String[] parts) {
         if (gameSession.isPlacementPhase()) {
             log.warn("Command could not be processed: {}, it is placement phase", message);
@@ -138,18 +157,14 @@ public class Message {
     }
 
     /**
-     * Handles the QUIT command, either from the client or the server.
+     * Handles the QUIT command.
      */
     private void handleQuitCommand() throws IOException {
-        if (sender != null) { // Client sent QUIT
+        if (sender != null) {
             log.info("Client {} is disconnecting.", sender.getUsername());
             sender.sendMessage("QUIT");
             gameSession.getOtherPlayerInSession(sender).sendMessage("WIN");
             sender.closeConnection();
-        } else { // Server sent QUIT
-            log.info("Server is shutting down. Notifying all clients.");
-            gameSession.notifyAllClients("QUIT");
-            gameSession.closeAllConnections();
         }
     }
 }

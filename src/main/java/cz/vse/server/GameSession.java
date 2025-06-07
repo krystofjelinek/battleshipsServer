@@ -178,8 +178,5 @@ public class GameSession {
         player1.sendMessage(s);
         player2.sendMessage(s);
     }
-
-    public void closeAllConnections() {
-    }
 }
 
