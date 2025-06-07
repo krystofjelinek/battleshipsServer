@@ -49,7 +49,7 @@ public class Game {
                     return "FAILURE";
                 } else if (listPlayerTwo.get(x-1).get(y-1) == 0) {
                     listPlayerTwo.get(x-1).set(y-1, -1);
-                    checkForWin();
+                    //checkForWin();
                     return "HIT" + " " + x + " " + y;
                 } else {
                     listPlayerTwo.get(x-1).set(y-1, 2);
@@ -61,7 +61,7 @@ public class Game {
                     return "FAILURE";
                 } else if (listPlayerOne.get(x-1).get(y-1) == 0) {
                     listPlayerOne.get(x-1).set(y-1, -1);
-                    checkForWin();
+                    //checkForWin();
                     return "HIT" + " " + x + " " + y;
                 } else {
                     listPlayerOne.get(x-1).set(y-1, 2);

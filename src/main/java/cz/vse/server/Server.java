@@ -131,6 +131,7 @@ public class Server {
         if (activeUsernames.remove(username)) {
             log.info("Removed active user: {}", username);
             log.debug("Active users after: {}", activeUsernames);
+
         } else {
             log.warn("Attempted to remove non-existent user: {}", username);
         }

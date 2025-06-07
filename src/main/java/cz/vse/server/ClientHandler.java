@@ -92,7 +92,12 @@ public class ClientHandler implements Runnable {
             log.warn("Client {} disconnected unexpectedly: {}", this.username, e.getMessage());
         } finally {
             try {
-                closeConnection(false);
+                if (gameSession != null) {
+                    //gameSession.getOtherPlayerInSession(this).setLoggedIn(false); // Set loggedIn to false before closing connection
+                    if (gameSession.getOtherPlayerInSession(this).isLoggedIn()){
+                        closeConnection(loggedIn);
+                    }
+                }
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

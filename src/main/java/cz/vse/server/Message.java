@@ -46,6 +46,14 @@ public class Message {
      */
     public void process(String message) throws IOException {
 
+        String[] parts = message.split(" ");
+
+        if (message.startsWith(COMMAND.QUIT.name())) {
+            handleQuitCommand();
+        } else if (message.startsWith(COMMAND.PING.name())) {
+            handlePingCommand();
+        }
+
         if (!gameSession.isPlayerTurn(sender)) {
             log.warn("Command could not be processed: {}, it is not {}`s turn", message, sender.getUsername());
             return;
@@ -54,18 +62,19 @@ public class Message {
         Game game = gameSession.getGame();
 
         log.info("Received message: {}", message);
-        String[] parts = message.split(" ");
+
         if (message.startsWith(COMMAND.PLACE.name())) {
             handlePlaceCommand(game, parts);
         } else if (message.startsWith(COMMAND.BOMB.name())) {
             handleBombCommand(game, parts);
-        } else if (message.startsWith(COMMAND.QUIT.name())) {
-            handleQuitCommand();
-        } else if (message.startsWith(COMMAND.PING.name())) {
-            handlePingCommand();
-        } else {
-            log.warn("Unknown command recieved: `{}` from {} ", message, sender.getUsername());
+        }
+
+        try {
+            COMMAND.valueOf(parts[0]);
+        } catch (IllegalArgumentException e) {
+            log.error("Invalid command received: {}", parts[0]);
             sender.sendMessage("FAILURE");
+            return;
         }
     }
 
@@ -95,7 +104,7 @@ public class Message {
                     return;
                 }
                 String result = game.place(x, y, shape, r, sender);
-
+//TODO neposilam WIN kdyz se klient odpoji neocekavane
                 if (result.equals("SUCCESS")) {
                     gameSession.incrementShipCount(sender, ShipShape.valueOf(parts[3]));
                     gameSession.incrementShipsPlaced(sender);
@@ -122,6 +131,7 @@ public class Message {
         sender.sendMessage("PONG");
         log.info("Responded to PING with PONG");
     }
+
 
     /**
      * Handles the BOMB command.
@@ -159,6 +169,7 @@ public class Message {
     /**
      * Handles the QUIT command.
      */
+    //TODO kdyz klient vyhraje tak se odesle QUIT, a ja poslu poslu znovu WIN
     private void handleQuitCommand() throws IOException {
         if (sender != null) {
             log.info("Client {} is disconnecting.", sender.getUsername());

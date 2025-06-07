@@ -1,194 +1,1353 @@
-2025-06-07 09:36:11.076 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
-2025-06-07 09:36:44.405 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@2f218f68 connected to the server
-2025-06-07 09:36:44.407 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
-2025-06-07 09:36:51.564 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@5e5874a8 connected to the server
-2025-06-07 09:36:51.565 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - User 'user2' logged in successfully
-2025-06-07 09:36:51.568 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
-2025-06-07 09:36:51.568 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
-2025-06-07 09:36:51.568 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
-2025-06-07 09:36:51.568 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
-2025-06-07 09:36:51.568 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
-2025-06-07 09:37:01.697 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
-2025-06-07 09:37:01.701 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
-2025-06-07 09:37:01.701 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
-2025-06-07 09:37:03.752 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
-2025-06-07 09:37:03.752 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
-2025-06-07 09:37:03.753 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
-2025-06-07 09:37:04.280 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 6 BLOCK_SHAPE 0
-2025-06-07 09:37:04.281 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 5 with rotation 0
-2025-06-07 09:37:04.282 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
-2025-06-07 09:37:05.013 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 7 1 BLOCK_SHAPE 0
-2025-06-07 09:37:05.014 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 6, 0 with rotation 0
-2025-06-07 09:37:05.015 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
-2025-06-07 09:37:05.580 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 8 7 FOUR_SHAPE 0
-2025-06-07 09:37:05.580 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 7, 6 with rotation 0
-2025-06-07 09:37:05.581 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
-2025-06-07 09:37:06.430 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 10 4 FOUR_SHAPE 0
-2025-06-07 09:37:06.431 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 9, 3 with rotation 0
-2025-06-07 09:37:06.431 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
-2025-06-07 09:37:07.480 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 7 6 TWO_SHAPE 0
-2025-06-07 09:37:07.481 [pool-1-thread-2] WARN  cz.vse.server.Game - Invalid placement: Adjacent ship detected at 6, 5
-2025-06-07 09:37:07.482 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user2.
-2025-06-07 09:37:08.980 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 2 7 TWO_SHAPE 0
-2025-06-07 09:37:08.982 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 1, 6 with rotation 0
-2025-06-07 09:37:08.982 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
-2025-06-07 09:37:10.996 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 2 TWO_SHAPE 0
-2025-06-07 09:37:10.998 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 1 with rotation 0
-2025-06-07 09:37:10.998 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
-2025-06-07 09:37:12.146 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 6 4 BLOCK_SHAPE 0
-2025-06-07 09:37:12.146 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 5, 3 with rotation 0
-2025-06-07 09:37:12.147 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
-2025-06-07 09:37:12.813 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 3 6 BLOCK_SHAPE 0
-2025-06-07 09:37:12.814 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 2, 5 with rotation 0
-2025-06-07 09:37:12.814 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
-2025-06-07 09:37:13.979 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 4 1 FOUR_SHAPE 0
-2025-06-07 09:37:13.980 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 3, 0 with rotation 0
-2025-06-07 09:37:13.980 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
-2025-06-07 09:37:15.180 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 10 6 FOUR_SHAPE 0
-2025-06-07 09:37:15.181 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 9, 5 with rotation 0
-2025-06-07 09:37:15.182 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
-2025-06-07 09:37:16.029 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 9 3 TWO_SHAPE 0
-2025-06-07 09:37:16.030 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 8, 2 with rotation 0
-2025-06-07 09:37:16.030 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
-2025-06-07 09:37:16.846 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 7 7 TWO_SHAPE 0
-2025-06-07 09:37:16.847 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 6, 6 with rotation 0
-2025-06-07 09:37:16.848 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
-2025-06-07 09:37:16.848 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
-2025-06-07 09:37:22.866 [pool-1-thread-1] WARN  cz.vse.server.Message - Command could not be processed: BOMB 1 1, it is not user1`s turn
-2025-06-07 09:37:25.715 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 1
-2025-06-07 09:37:25.720 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user2.
-2025-06-07 09:37:25.720 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user1.
-2025-06-07 09:37:25.721 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
-2025-06-07 09:37:30.596 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 1
-2025-06-07 09:37:30.597 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user1.
-2025-06-07 09:37:30.598 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user2.
-2025-06-07 09:37:30.598 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
-2025-06-07 09:37:34.946 [pool-1-thread-1] WARN  cz.vse.server.Message - Command could not be processed: BOMB 2 2, it is not user1`s turn
-2025-06-07 09:37:36.296 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 2
-2025-06-07 09:37:36.296 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user2.
-2025-06-07 09:37:36.297 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user1.
-2025-06-07 09:37:36.297 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
-2025-06-07 09:37:48.194 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user2
-2025-06-07 09:37:48.195 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user2
-2025-06-07 09:37:48.196 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [user1, user2]
-2025-06-07 09:37:48.196 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: user2
-2025-06-07 09:37:48.196 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: [user1]
-2025-06-07 09:37:48.196 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user1.
-2025-06-07 09:37:48.196 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user2 was closed
-2025-06-07 09:38:33.240 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
-2025-06-07 09:38:33.244 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
-2025-06-07 09:38:33.244 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users before: [user1]
-2025-06-07 09:38:33.244 [pool-1-thread-1] INFO  cz.vse.server.Server - Removed active user: user1
-2025-06-07 09:38:33.244 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users after: []
-2025-06-07 09:38:33.245 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
-2025-06-07 09:38:33.245 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
-2025-06-07 09:59:16.304 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
-2025-06-07 10:51:26.612 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
-2025-06-07 10:52:01.185 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@4cc5f1a4 connected to the server
-2025-06-07 10:52:01.189 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
-2025-06-07 10:52:06.639 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@26097b55 connected to the server
-2025-06-07 10:52:06.641 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - User 'user2' logged in successfully
-2025-06-07 10:52:06.649 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
-2025-06-07 10:52:06.650 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
-2025-06-07 10:52:06.650 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
-2025-06-07 10:52:06.650 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
-2025-06-07 10:52:06.650 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
-2025-06-07 10:52:11.048 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@6a33a2c2 connected to the server
-2025-06-07 10:52:11.049 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - User 'user3' logged in successfully
-2025-06-07 10:52:15.300 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@15230821 connected to the server
-2025-06-07 10:52:15.302 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - User 'user4' logged in successfully
-2025-06-07 10:52:15.302 [pool-1-thread-4] INFO  cz.vse.server.Server - user3 has been assigned to the game session
-2025-06-07 10:52:15.302 [pool-1-thread-4] INFO  cz.vse.server.Server - user4 has been assigned to the game session
-2025-06-07 10:52:15.302 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user3.
-2025-06-07 10:52:15.302 [pool-1-thread-4] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user4.
-2025-06-07 10:52:15.302 [pool-1-thread-4] INFO  cz.vse.server.Server - Game session started between user3 and user4
-2025-06-07 10:52:19.845 [pool-1-thread-5] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@723b9d8d connected to the server
-2025-06-07 10:52:19.847 [pool-1-thread-5] INFO  cz.vse.server.ClientHandler - User 'user5' logged in successfully
-2025-06-07 10:52:25.254 [pool-1-thread-6] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@14c5dd53 connected to the server
-2025-06-07 10:52:25.256 [pool-1-thread-6] INFO  cz.vse.server.ClientHandler - User 'user6' logged in successfully
-2025-06-07 10:52:25.256 [pool-1-thread-6] INFO  cz.vse.server.Server - user5 has been assigned to the game session
-2025-06-07 10:52:25.256 [pool-1-thread-6] INFO  cz.vse.server.Server - user6 has been assigned to the game session
-2025-06-07 10:52:25.257 [pool-1-thread-6] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user5.
-2025-06-07 10:52:25.257 [pool-1-thread-6] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user6.
-2025-06-07 10:52:25.257 [pool-1-thread-6] INFO  cz.vse.server.Server - Game session started between user5 and user6
-2025-06-07 10:52:30.991 [pool-1-thread-7] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@7484bba9 connected to the server
-2025-06-07 10:52:30.995 [pool-1-thread-7] INFO  cz.vse.server.ClientHandler - User 'user7' logged in successfully
-2025-06-07 10:52:36.170 [pool-1-thread-8] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@5dfc1470 connected to the server
-2025-06-07 10:52:36.171 [pool-1-thread-8] INFO  cz.vse.server.ClientHandler - User 'user8' logged in successfully
-2025-06-07 10:52:36.172 [pool-1-thread-8] INFO  cz.vse.server.Server - user7 has been assigned to the game session
-2025-06-07 10:52:36.172 [pool-1-thread-8] INFO  cz.vse.server.Server - user8 has been assigned to the game session
-2025-06-07 10:52:36.172 [pool-1-thread-8] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user7.
-2025-06-07 10:52:36.172 [pool-1-thread-8] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user8.
-2025-06-07 10:52:36.172 [pool-1-thread-8] INFO  cz.vse.server.Server - Game session started between user7 and user8
-2025-06-07 10:52:41.021 [pool-1-thread-9] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@32599d52 connected to the server
-2025-06-07 10:52:41.022 [pool-1-thread-9] INFO  cz.vse.server.ClientHandler - User 'user9' logged in successfully
-2025-06-07 10:52:46.104 [pool-1-thread-10] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@50dcc29f connected to the server
-2025-06-07 10:52:46.107 [pool-1-thread-10] INFO  cz.vse.server.ClientHandler - User 'user10' logged in successfully
-2025-06-07 10:52:46.107 [pool-1-thread-10] INFO  cz.vse.server.Server - user9 has been assigned to the game session
-2025-06-07 10:52:46.107 [pool-1-thread-10] INFO  cz.vse.server.Server - user10 has been assigned to the game session
-2025-06-07 10:52:46.107 [pool-1-thread-10] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user9.
-2025-06-07 10:52:46.107 [pool-1-thread-10] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user10.
-2025-06-07 10:52:46.107 [pool-1-thread-10] INFO  cz.vse.server.Server - Game session started between user9 and user10
-2025-06-07 10:52:50.811 [pool-1-thread-11] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@3990fbdc connected to the server
-2025-06-07 10:52:50.824 [pool-1-thread-11] INFO  cz.vse.server.ClientHandler - User 'user11' logged in successfully
-2025-06-07 10:52:56.801 [pool-1-thread-12] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@7d57d116 connected to the server
-2025-06-07 10:52:56.802 [pool-1-thread-12] INFO  cz.vse.server.ClientHandler - User 'user12' logged in successfully
-2025-06-07 10:52:56.802 [pool-1-thread-12] INFO  cz.vse.server.Server - user11 has been assigned to the game session
-2025-06-07 10:52:56.802 [pool-1-thread-12] INFO  cz.vse.server.Server - user12 has been assigned to the game session
-2025-06-07 10:52:56.802 [pool-1-thread-12] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user11.
-2025-06-07 10:52:56.802 [pool-1-thread-12] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user12.
-2025-06-07 10:52:56.802 [pool-1-thread-12] INFO  cz.vse.server.Server - Game session started between user11 and user12
-2025-06-07 10:53:01.180 [pool-1-thread-13] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@47e8943c connected to the server
-2025-06-07 10:53:01.181 [pool-1-thread-13] INFO  cz.vse.server.ClientHandler - User 'user13' logged in successfully
-2025-06-07 10:53:36.717 [pool-1-thread-14] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@70bb9220 connected to the server
-2025-06-07 10:53:36.718 [pool-1-thread-14] INFO  cz.vse.server.ClientHandler - User 'user13' logged in successfully
-2025-06-07 10:53:36.718 [pool-1-thread-14] WARN  cz.vse.server.Server - Username 'user13' is already in use. Rejecting client connection.
-2025-06-07 10:53:36.718 [pool-1-thread-14] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user13.
-2025-06-07 10:53:36.720 [pool-1-thread-14] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user13
-2025-06-07 10:53:36.720 [pool-1-thread-14] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user13
-2025-06-07 10:53:36.720 [pool-1-thread-14] DEBUG cz.vse.server.Server - Active users before: [user1, user11, user2, user10, user13, user12, user9, user7, user8, user5, user6, user3, user4]
-2025-06-07 10:53:36.720 [pool-1-thread-14] INFO  cz.vse.server.Server - Removed active user: user13
-2025-06-07 10:53:36.720 [pool-1-thread-14] DEBUG cz.vse.server.Server - Active users after: [user1, user11, user2, user10, user12, user9, user7, user8, user5, user6, user3, user4]
-2025-06-07 10:53:36.720 [pool-1-thread-14] ERROR cz.vse.server.ClientHandler - Unexpected error closing connection for client user13: Cannot invoke "cz.vse.server.GameSession.getOtherPlayerInSession(cz.vse.server.ClientHandler)" because "this.gameSession" is null
-2025-06-07 10:53:36.721 [pool-1-thread-14] INFO  cz.vse.server.ClientHandler - Connection for client user13 is already closing
-2025-06-07 11:04:27.389 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
-2025-06-07 11:05:29.237 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@19cd74dc connected to the server
-2025-06-07 11:05:40.370 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@4173c460 connected to the server
-2025-06-07 11:07:19.564 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
-2025-06-07 11:09:24.322 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
-2025-06-07 11:09:47.418 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@184321ae connected to the server
-2025-06-07 11:10:01.248 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@146a14ff connected to the server
-2025-06-07 11:10:31.446 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
-2025-06-07 11:26:22.444 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
-2025-06-07 11:34:29.378 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
-2025-06-07 11:34:56.548 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@7d11cf91 connected to the server
-2025-06-07 11:34:56.549 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
-2025-06-07 11:35:06.012 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@2e889272 connected to the server
-2025-06-07 11:35:06.016 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
-2025-06-07 11:35:06.016 [pool-1-thread-2] WARN  cz.vse.server.Server - Username 'user1' is already in use. Rejecting client connection.
-2025-06-07 11:35:06.016 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user1.
-2025-06-07 11:35:06.016 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
-2025-06-07 11:35:06.016 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
-2025-06-07 11:35:06.017 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [user1]
-2025-06-07 11:35:06.017 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: user1
-2025-06-07 11:35:06.017 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: []
-2025-06-07 11:35:06.019 [pool-1-thread-2] ERROR cz.vse.server.ClientHandler - Unexpected error closing connection for client user1: Cannot invoke "cz.vse.server.GameSession.getOtherPlayerInSession(cz.vse.server.ClientHandler)" because "this.gameSession" is null
-2025-06-07 11:35:06.019 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection for client user1 is already closing
-2025-06-07 11:39:33.296 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
-2025-06-07 11:39:57.931 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@1ab9e56e connected to the server
-2025-06-07 11:39:57.933 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
-2025-06-07 11:40:05.938 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@7e6d32ee connected to the server
-2025-06-07 11:40:05.939 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - User 'user1' logged in successfully
-2025-06-07 11:40:05.940 [pool-1-thread-2] WARN  cz.vse.server.Server - Username 'user1' is already in use. Rejecting client connection.
-2025-06-07 11:40:05.940 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user1.
-2025-06-07 11:40:05.940 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
-2025-06-07 11:40:05.940 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
-2025-06-07 11:40:05.940 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
-2025-06-07 11:40:05.940 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection for client user1 is already closing
-2025-06-07 11:41:18.017 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@3b53ff5d connected to the server
-2025-06-07 11:41:18.019 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - User 'user2' logged in successfully
-2025-06-07 11:41:18.022 [pool-1-thread-3] INFO  cz.vse.server.Server - user1 has been assigned to the game session
-2025-06-07 11:41:18.022 [pool-1-thread-3] INFO  cz.vse.server.Server - user2 has been assigned to the game session
-2025-06-07 11:41:18.022 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
-2025-06-07 11:41:18.022 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
-2025-06-07 11:41:18.022 [pool-1-thread-3] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 12:52:15.983 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 12:52:35.779 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@50b14a53 connected to the server
+2025-06-07 12:52:40.391 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@2d6f277a connected to the server
+2025-06-07 12:52:40.395 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 12:52:40.396 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 12:52:40.396 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 12:52:40.396 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 12:52:40.396 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 12:52:43.949 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user2
+2025-06-07 12:52:43.949 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user2
+2025-06-07 12:52:43.949 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user2 was closed
+2025-06-07 12:52:49.251 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 12:52:49.252 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 12:52:49.252 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 13:11:34.285 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 13:11:52.032 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@842dcbe connected to the server
+2025-06-07 13:11:59.508 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@6d5a73c2 connected to the server
+2025-06-07 13:11:59.510 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 13:11:59.510 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 13:11:59.511 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 13:11:59.511 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 13:11:59.511 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 13:12:06.504 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user2
+2025-06-07 13:12:06.506 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user2
+2025-06-07 13:12:06.506 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [user1, user2]
+2025-06-07 13:12:06.506 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: user2
+2025-06-07 13:12:06.506 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: [user1]
+2025-06-07 13:12:06.506 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user1.
+2025-06-07 13:12:06.506 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user2 was closed
+2025-06-07 13:12:11.778 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: QUIT
+2025-06-07 13:12:11.779 [pool-1-thread-1] INFO  cz.vse.server.Message - Client user1 is disconnecting.
+2025-06-07 13:12:11.780 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user1.
+2025-06-07 13:12:11.780 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 13:12:11.780 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 13:12:11.780 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 13:12:11.781 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users before: [user1]
+2025-06-07 13:12:11.781 [pool-1-thread-1] INFO  cz.vse.server.Server - Removed active user: user1
+2025-06-07 13:12:11.781 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users after: []
+2025-06-07 13:12:11.781 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 13:12:11.781 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 13:12:11.781 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection for client user1 is already closing
+2025-06-07 13:12:54.210 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 13:13:09.432 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@f6969c0 connected to the server
+2025-06-07 13:13:16.133 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@7e6cdf77 connected to the server
+2025-06-07 13:13:16.138 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 13:13:16.138 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 13:13:16.138 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 13:13:16.139 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 13:13:16.139 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 13:13:36.865 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 13:13:36.868 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 13:13:36.869 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:13:38.208 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 13:13:38.209 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 13:13:38.210 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:13:39.337 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-07 13:13:39.338 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-07 13:13:39.338 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:13:40.856 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 9 BLOCK_SHAPE 0
+2025-06-07 13:13:40.857 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 8 with rotation 0
+2025-06-07 13:13:40.858 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:13:42.339 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 4 1 FOUR_SHAPE 0
+2025-06-07 13:13:42.340 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 3, 0 with rotation 0
+2025-06-07 13:13:42.340 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:13:43.388 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 4 6 FOUR_SHAPE 0
+2025-06-07 13:13:43.388 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 3, 5 with rotation 0
+2025-06-07 13:13:43.388 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:13:44.756 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 6 1 TWO_SHAPE 0
+2025-06-07 13:13:44.758 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 5, 0 with rotation 0
+2025-06-07 13:13:44.759 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:13:45.872 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 6 4 TWO_SHAPE 0
+2025-06-07 13:13:45.873 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 5, 3 with rotation 0
+2025-06-07 13:13:45.873 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:13:48.638 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-07 13:13:48.638 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-07 13:13:48.639 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:13:49.505 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 9 BLOCK_SHAPE 0
+2025-06-07 13:13:49.507 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 8 with rotation 0
+2025-06-07 13:13:49.507 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:13:50.972 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 1 FOUR_SHAPE 0
+2025-06-07 13:13:50.973 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 0 with rotation 0
+2025-06-07 13:13:50.973 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:13:52.755 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 6 FOUR_SHAPE 0
+2025-06-07 13:13:52.756 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 5 with rotation 0
+2025-06-07 13:13:52.757 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:13:53.672 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 6 1 TWO_SHAPE 0
+2025-06-07 13:13:53.673 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 5, 0 with rotation 0
+2025-06-07 13:13:53.674 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:13:54.272 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 6 4 TWO_SHAPE 0
+2025-06-07 13:13:54.273 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 5, 3 with rotation 0
+2025-06-07 13:13:54.273 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:13:54.274 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:13:58.373 [pool-1-thread-1] WARN  cz.vse.server.Message - Command could not be processed: BOMB 1 1, it is not user1`s turn
+2025-06-07 13:14:01.323 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 1
+2025-06-07 13:14:01.328 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user2.
+2025-06-07 13:14:01.328 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user1.
+2025-06-07 13:14:01.328 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:03.988 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 1
+2025-06-07 13:14:03.989 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user1.
+2025-06-07 13:14:03.989 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user2.
+2025-06-07 13:14:03.989 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:04.855 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 2
+2025-06-07 13:14:04.856 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user2.
+2025-06-07 13:14:04.856 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user1.
+2025-06-07 13:14:04.856 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:05.890 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 2
+2025-06-07 13:14:05.892 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user1.
+2025-06-07 13:14:05.893 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user2.
+2025-06-07 13:14:05.894 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:06.705 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 3
+2025-06-07 13:14:06.706 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 3 to client: user2.
+2025-06-07 13:14:06.706 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 3 to client: user1.
+2025-06-07 13:14:06.706 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:07.755 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 3
+2025-06-07 13:14:07.756 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 3 to client: user1.
+2025-06-07 13:14:07.756 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 3 to client: user2.
+2025-06-07 13:14:07.756 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:08.770 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 4
+2025-06-07 13:14:08.771 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user2.
+2025-06-07 13:14:08.771 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user1.
+2025-06-07 13:14:08.771 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:09.938 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 4
+2025-06-07 13:14:09.938 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user1.
+2025-06-07 13:14:09.939 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user2.
+2025-06-07 13:14:09.939 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:12.522 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 1
+2025-06-07 13:14:12.524 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 1 to client: user2.
+2025-06-07 13:14:12.525 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 1 to client: user1.
+2025-06-07 13:14:12.525 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:13.571 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 1
+2025-06-07 13:14:13.571 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 1 to client: user1.
+2025-06-07 13:14:13.571 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 1 to client: user2.
+2025-06-07 13:14:13.572 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:14.604 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 2
+2025-06-07 13:14:14.605 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user2.
+2025-06-07 13:14:14.606 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user1.
+2025-06-07 13:14:14.606 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:15.604 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 2
+2025-06-07 13:14:15.605 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user1.
+2025-06-07 13:14:15.605 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user2.
+2025-06-07 13:14:15.606 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:16.737 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 3
+2025-06-07 13:14:16.737 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 3 to client: user2.
+2025-06-07 13:14:16.737 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 3 to client: user1.
+2025-06-07 13:14:16.737 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:17.904 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 3
+2025-06-07 13:14:17.904 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 3 to client: user1.
+2025-06-07 13:14:17.904 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 3 to client: user2.
+2025-06-07 13:14:17.905 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:18.805 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 4
+2025-06-07 13:14:18.806 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user2.
+2025-06-07 13:14:18.806 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user1.
+2025-06-07 13:14:18.806 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:20.087 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 4
+2025-06-07 13:14:20.087 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user1.
+2025-06-07 13:14:20.087 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user2.
+2025-06-07 13:14:20.088 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:21.372 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 6
+2025-06-07 13:14:21.372 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user2.
+2025-06-07 13:14:21.372 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user1.
+2025-06-07 13:14:21.372 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:22.438 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 6
+2025-06-07 13:14:22.439 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user1.
+2025-06-07 13:14:22.440 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user2.
+2025-06-07 13:14:22.440 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:23.423 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 7
+2025-06-07 13:14:23.424 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 7 to client: user2.
+2025-06-07 13:14:23.424 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 7 to client: user1.
+2025-06-07 13:14:23.425 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:24.487 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 7
+2025-06-07 13:14:24.490 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 7 to client: user1.
+2025-06-07 13:14:24.490 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 7 to client: user2.
+2025-06-07 13:14:24.490 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:25.470 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 6
+2025-06-07 13:14:25.471 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 6 to client: user2.
+2025-06-07 13:14:25.471 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 6 to client: user1.
+2025-06-07 13:14:25.471 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:26.837 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 6
+2025-06-07 13:14:26.838 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 6 to client: user1.
+2025-06-07 13:14:26.838 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 6 to client: user2.
+2025-06-07 13:14:26.838 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:27.788 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 7
+2025-06-07 13:14:27.789 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 7 to client: user2.
+2025-06-07 13:14:27.789 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 7 to client: user1.
+2025-06-07 13:14:27.789 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:28.770 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 7
+2025-06-07 13:14:28.771 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 7 to client: user1.
+2025-06-07 13:14:28.771 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 7 to client: user2.
+2025-06-07 13:14:28.772 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:29.737 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 9
+2025-06-07 13:14:29.737 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 9 to client: user2.
+2025-06-07 13:14:29.737 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 9 to client: user1.
+2025-06-07 13:14:29.737 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:30.537 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 9
+2025-06-07 13:14:30.538 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 9 to client: user1.
+2025-06-07 13:14:30.538 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 9 to client: user2.
+2025-06-07 13:14:30.539 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:31.853 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 10
+2025-06-07 13:14:31.854 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 10 to client: user2.
+2025-06-07 13:14:31.854 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 10 to client: user1.
+2025-06-07 13:14:31.854 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:32.737 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 10
+2025-06-07 13:14:32.737 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 10 to client: user1.
+2025-06-07 13:14:32.738 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 10 to client: user2.
+2025-06-07 13:14:32.738 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:33.688 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 9
+2025-06-07 13:14:33.688 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 9 to client: user2.
+2025-06-07 13:14:33.688 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 9 to client: user1.
+2025-06-07 13:14:33.689 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:34.654 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 9
+2025-06-07 13:14:34.654 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 9 to client: user1.
+2025-06-07 13:14:34.655 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 9 to client: user2.
+2025-06-07 13:14:34.655 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:35.904 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 10
+2025-06-07 13:14:35.905 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 10 to client: user2.
+2025-06-07 13:14:35.905 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 10 to client: user1.
+2025-06-07 13:14:35.905 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:36.953 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 10
+2025-06-07 13:14:36.954 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 10 to client: user1.
+2025-06-07 13:14:36.954 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 10 to client: user2.
+2025-06-07 13:14:36.954 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:38.454 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 1
+2025-06-07 13:14:38.455 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 1 to client: user2.
+2025-06-07 13:14:38.455 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 1 to client: user1.
+2025-06-07 13:14:38.455 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:39.670 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 1
+2025-06-07 13:14:39.671 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 1 to client: user1.
+2025-06-07 13:14:39.672 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 1 to client: user2.
+2025-06-07 13:14:39.672 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:40.754 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 2
+2025-06-07 13:14:40.755 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user2.
+2025-06-07 13:14:40.755 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user1.
+2025-06-07 13:14:40.756 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:41.904 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 2
+2025-06-07 13:14:41.906 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user1.
+2025-06-07 13:14:41.906 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user2.
+2025-06-07 13:14:41.906 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:42.871 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 3
+2025-06-07 13:14:42.872 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 3 to client: user2.
+2025-06-07 13:14:42.872 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 3 to client: user1.
+2025-06-07 13:14:42.872 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:14:44.188 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 3
+2025-06-07 13:14:44.189 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 3 to client: user1.
+2025-06-07 13:14:44.189 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 3 to client: user2.
+2025-06-07 13:14:44.189 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:14:55.470 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 4
+2025-06-07 13:14:55.472 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 4 to client: user2.
+2025-06-07 13:14:55.472 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 4 to client: user1.
+2025-06-07 13:14:55.472 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:15:02.853 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 4
+2025-06-07 13:15:02.854 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 4 to client: user1.
+2025-06-07 13:15:02.854 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 4 to client: user2.
+2025-06-07 13:15:02.854 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:15:05.437 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 6
+2025-06-07 13:15:05.438 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 6 to client: user2.
+2025-06-07 13:15:05.438 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 6 to client: user1.
+2025-06-07 13:15:05.439 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:15:07.237 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 6
+2025-06-07 13:15:07.238 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 6 to client: user1.
+2025-06-07 13:15:07.238 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 6 to client: user2.
+2025-06-07 13:15:07.238 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:15:08.437 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 7
+2025-06-07 13:15:08.438 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 7 to client: user2.
+2025-06-07 13:15:08.438 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 7 to client: user1.
+2025-06-07 13:15:08.438 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:15:09.521 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 7
+2025-06-07 13:15:09.522 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 7 to client: user1.
+2025-06-07 13:15:09.523 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 7 to client: user2.
+2025-06-07 13:15:09.523 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:15:10.537 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 8
+2025-06-07 13:15:10.538 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 8 to client: user2.
+2025-06-07 13:15:10.538 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 8 to client: user1.
+2025-06-07 13:15:10.538 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:15:11.623 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 8
+2025-06-07 13:15:11.625 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 8 to client: user1.
+2025-06-07 13:15:11.625 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 8 to client: user2.
+2025-06-07 13:15:11.625 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:15:12.653 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 9
+2025-06-07 13:15:12.654 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 9 to client: user2.
+2025-06-07 13:15:12.654 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 9 to client: user1.
+2025-06-07 13:15:12.654 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:15:13.936 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 9
+2025-06-07 13:15:13.937 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 9 to client: user1.
+2025-06-07 13:15:13.937 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 9 to client: user2.
+2025-06-07 13:15:13.937 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:15:15.086 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 1
+2025-06-07 13:15:15.087 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 1 to client: user2.
+2025-06-07 13:15:15.087 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 1 to client: user1.
+2025-06-07 13:15:15.087 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:15:16.173 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 6 1
+2025-06-07 13:15:16.174 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 1 to client: user1.
+2025-06-07 13:15:16.174 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 1 to client: user2.
+2025-06-07 13:15:16.174 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:15:17.421 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 2
+2025-06-07 13:15:17.421 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 2 to client: user2.
+2025-06-07 13:15:17.422 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 2 to client: user1.
+2025-06-07 13:15:17.422 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:15:18.486 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 6 2
+2025-06-07 13:15:18.487 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 2 to client: user1.
+2025-06-07 13:15:18.487 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 2 to client: user2.
+2025-06-07 13:15:18.487 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:15:19.854 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 4
+2025-06-07 13:15:19.855 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 4 to client: user2.
+2025-06-07 13:15:19.855 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 4 to client: user1.
+2025-06-07 13:15:19.855 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:15:21.020 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 6 4
+2025-06-07 13:15:21.021 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 4 to client: user1.
+2025-06-07 13:15:21.021 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 4 to client: user2.
+2025-06-07 13:15:21.021 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:15:23.237 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 5
+2025-06-07 13:15:23.238 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: LOST to client: user1.
+2025-06-07 13:15:23.238 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 13:15:23.238 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 5 to client: user2.
+2025-06-07 13:15:23.238 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 5 to client: user1.
+2025-06-07 13:15:23.239 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:15:23.239 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: LOST to client: user1.
+2025-06-07 13:15:23.239 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 13:18:25.246 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 13:20:57.939 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 13:21:33.456 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@2957e622 connected to the server
+2025-06-07 13:21:38.778 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@6cb53849 connected to the server
+2025-06-07 13:21:38.785 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 13:21:38.785 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 13:21:38.785 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 13:21:38.786 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 13:21:38.786 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 13:21:44.110 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 13:21:44.114 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 13:21:44.115 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:21:46.285 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-07 13:21:46.286 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-07 13:21:46.286 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:21:46.800 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 8 BLOCK_SHAPE 0
+2025-06-07 13:21:46.800 [pool-1-thread-1] WARN  cz.vse.server.Game - Invalid placement: Adjacent ship detected at 0, 7
+2025-06-07 13:21:46.801 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user1.
+2025-06-07 13:21:47.683 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 9 BLOCK_SHAPE 0
+2025-06-07 13:21:47.683 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 8 with rotation 0
+2025-06-07 13:21:47.684 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:21:48.901 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 4 1 FOUR_SHAPE 0
+2025-06-07 13:21:48.902 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 3, 0 with rotation 0
+2025-06-07 13:21:48.902 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:21:49.768 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 4 6 FOUR_SHAPE 0
+2025-06-07 13:21:49.769 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 3, 5 with rotation 0
+2025-06-07 13:21:49.769 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:21:50.867 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 6 1 TWO_SHAPE 0
+2025-06-07 13:21:50.867 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 5, 0 with rotation 0
+2025-06-07 13:21:50.867 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:21:51.801 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 6 4 TWO_SHAPE 0
+2025-06-07 13:21:51.802 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 5, 3 with rotation 0
+2025-06-07 13:21:51.802 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:21:53.427 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 13:21:53.427 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 13:21:53.428 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:21:54.401 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-07 13:21:54.401 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-07 13:21:54.401 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:21:55.202 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 9 BLOCK_SHAPE 0
+2025-06-07 13:21:55.202 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 8 with rotation 0
+2025-06-07 13:21:55.202 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:21:56.368 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 1 FOUR_SHAPE 0
+2025-06-07 13:21:56.368 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 0 with rotation 0
+2025-06-07 13:21:56.369 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:21:57.051 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 6 FOUR_SHAPE 0
+2025-06-07 13:21:57.052 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 5 with rotation 0
+2025-06-07 13:21:57.052 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:21:57.868 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 6 1 TWO_SHAPE 0
+2025-06-07 13:21:57.869 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 5, 0 with rotation 0
+2025-06-07 13:21:57.869 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:21:58.434 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 6 4 TWO_SHAPE 0
+2025-06-07 13:21:58.435 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 5, 3 with rotation 0
+2025-06-07 13:21:58.435 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:21:58.435 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:21:59.470 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 1
+2025-06-07 13:21:59.476 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user2.
+2025-06-07 13:21:59.476 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user1.
+2025-06-07 13:21:59.477 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:01.188 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 1
+2025-06-07 13:22:01.190 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user1.
+2025-06-07 13:22:01.190 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user2.
+2025-06-07 13:22:01.190 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:02.250 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 2
+2025-06-07 13:22:02.251 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user2.
+2025-06-07 13:22:02.251 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user1.
+2025-06-07 13:22:02.251 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:03.983 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 2
+2025-06-07 13:22:03.984 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user1.
+2025-06-07 13:22:03.984 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user2.
+2025-06-07 13:22:03.984 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:04.900 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 3
+2025-06-07 13:22:04.900 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 3 to client: user2.
+2025-06-07 13:22:04.900 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 3 to client: user1.
+2025-06-07 13:22:04.900 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:05.900 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 3
+2025-06-07 13:22:05.900 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 3 to client: user1.
+2025-06-07 13:22:05.900 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 3 to client: user2.
+2025-06-07 13:22:05.901 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:06.900 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 4
+2025-06-07 13:22:06.900 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user2.
+2025-06-07 13:22:06.901 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user1.
+2025-06-07 13:22:06.901 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:08.184 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 4
+2025-06-07 13:22:08.185 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user1.
+2025-06-07 13:22:08.185 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user2.
+2025-06-07 13:22:08.185 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:09.334 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 1
+2025-06-07 13:22:09.335 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 1 to client: user2.
+2025-06-07 13:22:09.335 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 1 to client: user1.
+2025-06-07 13:22:09.335 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:10.467 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 1
+2025-06-07 13:22:10.468 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 1 to client: user1.
+2025-06-07 13:22:10.469 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 1 to client: user2.
+2025-06-07 13:22:10.469 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:11.767 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 2
+2025-06-07 13:22:11.767 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user2.
+2025-06-07 13:22:11.767 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user1.
+2025-06-07 13:22:11.767 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:12.917 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 2
+2025-06-07 13:22:12.917 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user1.
+2025-06-07 13:22:12.917 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user2.
+2025-06-07 13:22:12.918 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:14.183 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 3
+2025-06-07 13:22:14.184 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 3 to client: user2.
+2025-06-07 13:22:14.184 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 3 to client: user1.
+2025-06-07 13:22:14.184 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:15.283 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 3
+2025-06-07 13:22:15.284 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 3 to client: user1.
+2025-06-07 13:22:15.284 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 3 to client: user2.
+2025-06-07 13:22:15.284 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:16.283 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 4
+2025-06-07 13:22:16.284 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user2.
+2025-06-07 13:22:16.284 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user1.
+2025-06-07 13:22:16.284 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:17.233 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 4
+2025-06-07 13:22:17.234 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user1.
+2025-06-07 13:22:17.234 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user2.
+2025-06-07 13:22:17.234 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:18.467 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 6
+2025-06-07 13:22:18.467 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user2.
+2025-06-07 13:22:18.467 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user1.
+2025-06-07 13:22:18.468 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:19.801 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 6
+2025-06-07 13:22:19.802 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user1.
+2025-06-07 13:22:19.802 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user2.
+2025-06-07 13:22:19.803 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:20.717 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 7
+2025-06-07 13:22:20.718 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 7 to client: user2.
+2025-06-07 13:22:20.718 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 7 to client: user1.
+2025-06-07 13:22:20.718 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:21.334 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 5
+2025-06-07 13:22:21.335 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 4 5 to client: user1.
+2025-06-07 13:22:21.335 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 4 5 to client: user2.
+2025-06-07 13:22:21.336 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:22.984 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 6
+2025-06-07 13:22:22.984 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 6 to client: user2.
+2025-06-07 13:22:22.985 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 6 to client: user1.
+2025-06-07 13:22:22.985 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:23.684 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 5 8
+2025-06-07 13:22:23.685 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 8 to client: user1.
+2025-06-07 13:22:23.685 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 8 to client: user2.
+2025-06-07 13:22:23.685 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:24.750 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 7
+2025-06-07 13:22:24.751 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 7 to client: user2.
+2025-06-07 13:22:24.751 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 7 to client: user1.
+2025-06-07 13:22:24.751 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:25.333 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 10 5
+2025-06-07 13:22:25.334 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 10 5 to client: user1.
+2025-06-07 13:22:25.334 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 10 5 to client: user2.
+2025-06-07 13:22:25.334 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:26.783 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 9
+2025-06-07 13:22:26.784 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 9 to client: user2.
+2025-06-07 13:22:26.784 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 9 to client: user1.
+2025-06-07 13:22:26.784 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:27.883 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 8 10
+2025-06-07 13:22:27.883 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 10 to client: user1.
+2025-06-07 13:22:27.883 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 10 to client: user2.
+2025-06-07 13:22:27.884 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:28.900 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 10
+2025-06-07 13:22:28.900 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 10 to client: user2.
+2025-06-07 13:22:28.900 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 10 to client: user1.
+2025-06-07 13:22:28.900 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:29.817 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 5 2
+2025-06-07 13:22:29.818 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 2 to client: user1.
+2025-06-07 13:22:29.818 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 2 to client: user2.
+2025-06-07 13:22:29.818 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:30.833 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 9
+2025-06-07 13:22:30.833 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 9 to client: user2.
+2025-06-07 13:22:30.833 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 9 to client: user1.
+2025-06-07 13:22:30.833 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:31.600 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 7 5
+2025-06-07 13:22:31.601 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 5 to client: user1.
+2025-06-07 13:22:31.601 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 5 to client: user2.
+2025-06-07 13:22:31.601 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:32.534 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 10
+2025-06-07 13:22:32.534 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 10 to client: user2.
+2025-06-07 13:22:32.535 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 10 to client: user1.
+2025-06-07 13:22:32.535 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:33.150 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 7 4
+2025-06-07 13:22:33.150 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 4 to client: user1.
+2025-06-07 13:22:33.151 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 4 to client: user2.
+2025-06-07 13:22:33.151 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:34.466 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 1
+2025-06-07 13:22:34.467 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 1 to client: user2.
+2025-06-07 13:22:34.467 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 1 to client: user1.
+2025-06-07 13:22:34.467 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:35.200 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 7 7
+2025-06-07 13:22:35.200 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 7 to client: user1.
+2025-06-07 13:22:35.200 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 7 to client: user2.
+2025-06-07 13:22:35.201 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:36.450 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 2
+2025-06-07 13:22:36.450 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user2.
+2025-06-07 13:22:36.450 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user1.
+2025-06-07 13:22:36.450 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:38.950 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 6 10
+2025-06-07 13:22:38.951 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 10 to client: user1.
+2025-06-07 13:22:38.952 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 10 to client: user2.
+2025-06-07 13:22:38.952 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:43.217 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 3
+2025-06-07 13:22:43.217 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 3 to client: user2.
+2025-06-07 13:22:43.217 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 3 to client: user1.
+2025-06-07 13:22:43.217 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:44.017 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 9 1
+2025-06-07 13:22:44.017 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 9 1 to client: user1.
+2025-06-07 13:22:44.017 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 9 1 to client: user2.
+2025-06-07 13:22:44.017 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:45.016 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 4
+2025-06-07 13:22:45.017 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 4 to client: user2.
+2025-06-07 13:22:45.017 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 4 to client: user1.
+2025-06-07 13:22:45.017 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:45.750 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 8
+2025-06-07 13:22:45.750 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 2 8 to client: user1.
+2025-06-07 13:22:45.751 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 2 8 to client: user2.
+2025-06-07 13:22:45.751 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:46.817 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 6
+2025-06-07 13:22:46.817 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 6 to client: user2.
+2025-06-07 13:22:46.817 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 6 to client: user1.
+2025-06-07 13:22:46.817 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:47.583 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 3 9
+2025-06-07 13:22:47.583 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 3 9 to client: user1.
+2025-06-07 13:22:47.583 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 3 9 to client: user2.
+2025-06-07 13:22:47.584 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:48.800 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 7
+2025-06-07 13:22:48.800 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 7 to client: user2.
+2025-06-07 13:22:48.800 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 7 to client: user1.
+2025-06-07 13:22:48.800 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:49.650 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 10
+2025-06-07 13:22:49.650 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 10 to client: user1.
+2025-06-07 13:22:49.650 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 10 to client: user2.
+2025-06-07 13:22:49.650 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:52.033 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 8
+2025-06-07 13:22:52.033 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 8 to client: user2.
+2025-06-07 13:22:52.033 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 8 to client: user1.
+2025-06-07 13:22:52.033 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:53.367 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 2
+2025-06-07 13:22:53.367 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user1.
+2025-06-07 13:22:53.367 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user2.
+2025-06-07 13:22:53.367 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:54.466 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 9
+2025-06-07 13:22:54.467 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 9 to client: user2.
+2025-06-07 13:22:54.467 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 9 to client: user1.
+2025-06-07 13:22:54.467 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:55.733 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 7 2
+2025-06-07 13:22:55.733 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 2 to client: user1.
+2025-06-07 13:22:55.733 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 2 to client: user2.
+2025-06-07 13:22:55.733 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:56.916 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 1
+2025-06-07 13:22:56.916 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 1 to client: user2.
+2025-06-07 13:22:56.917 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 1 to client: user1.
+2025-06-07 13:22:56.917 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:57.616 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 6 8
+2025-06-07 13:22:57.617 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 8 to client: user1.
+2025-06-07 13:22:57.617 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 8 to client: user2.
+2025-06-07 13:22:57.617 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:22:58.683 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 2
+2025-06-07 13:22:58.683 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 2 to client: user2.
+2025-06-07 13:22:58.683 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 2 to client: user1.
+2025-06-07 13:22:58.683 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:22:59.400 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 9 8
+2025-06-07 13:22:59.400 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 9 8 to client: user1.
+2025-06-07 13:22:59.401 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 9 8 to client: user2.
+2025-06-07 13:22:59.401 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:23:00.516 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 4
+2025-06-07 13:23:00.517 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 4 to client: user2.
+2025-06-07 13:23:00.517 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 4 to client: user1.
+2025-06-07 13:23:00.517 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:23:02.033 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 9 3
+2025-06-07 13:23:02.034 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 9 3 to client: user1.
+2025-06-07 13:23:02.034 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 9 3 to client: user2.
+2025-06-07 13:23:02.034 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:23:03.667 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 5
+2025-06-07 13:23:03.667 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 5 to client: user2.
+2025-06-07 13:23:03.667 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 5 to client: user1.
+2025-06-07 13:23:03.667 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:23:03.667 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: LOST to client: user1.
+2025-06-07 13:23:03.668 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 13:23:11.356 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: QUIT
+2025-06-07 13:23:11.359 [pool-1-thread-1] INFO  cz.vse.server.Message - Client user1 is disconnecting.
+2025-06-07 13:23:11.359 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user1.
+2025-06-07 13:23:11.359 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 13:23:11.365 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 13:23:11.366 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 13:23:11.366 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users before: [user1, user2]
+2025-06-07 13:23:11.368 [pool-1-thread-1] INFO  cz.vse.server.Server - Removed active user: user1
+2025-06-07 13:23:11.368 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users after: [user2]
+2025-06-07 13:23:11.368 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 13:23:11.368 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 13:23:11.368 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection for client user1 is already closing
+2025-06-07 13:23:28.972 [pool-1-thread-2] WARN  cz.vse.server.Message - Command could not be processed: QUIT, it is not user2`s turn
+2025-06-07 13:23:28.974 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user2
+2025-06-07 13:23:28.974 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user2
+2025-06-07 13:23:28.975 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [user2]
+2025-06-07 13:23:28.975 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: user2
+2025-06-07 13:23:28.975 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: []
+2025-06-07 13:23:28.978 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user1.
+2025-06-07 13:23:28.978 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user2 was closed
+2025-06-07 13:52:01.289 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 13:52:33.601 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@32aefe9d connected to the server
+2025-06-07 13:52:40.765 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@649e4d65 connected to the server
+2025-06-07 13:52:40.768 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 13:52:40.769 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 13:52:40.769 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 13:52:40.769 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 13:52:40.769 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 13:52:46.172 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 13:52:46.173 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 13:52:46.173 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 13:54:23.318 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 13:54:58.991 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@79f03238 connected to the server
+2025-06-07 13:55:07.986 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@141a0aec connected to the server
+2025-06-07 13:55:07.987 [pool-1-thread-2] WARN  cz.vse.server.Server - Username 'user1' is already in use. Rejecting client connection.
+2025-06-07 13:55:07.988 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user1.
+2025-06-07 13:55:07.988 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 13:55:07.988 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 13:55:07.988 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 13:56:17.251 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 13:56:35.248 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@14553cd7 connected to the server
+2025-06-07 13:56:44.387 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@35af5f8 connected to the server
+2025-06-07 13:56:44.388 [pool-1-thread-2] WARN  cz.vse.server.Server - Username 'user1' is already in use. Rejecting client connection.
+2025-06-07 13:56:44.388 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user1.
+2025-06-07 13:56:44.389 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 13:56:44.389 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 13:56:44.389 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 13:57:19.601 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@9a29e88 connected to the server
+2025-06-07 13:57:19.608 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 13:57:19.609 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 13:57:19.609 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 13:57:19.609 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 13:57:19.609 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 13:57:24.755 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 13:57:24.756 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 13:57:24.757 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:57:25.846 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 13:57:25.847 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 13:57:25.848 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:57:27.176 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-07 13:57:27.177 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-07 13:57:27.177 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:57:28.225 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 9 BLOCK_SHAPE 0
+2025-06-07 13:57:28.226 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 8 with rotation 0
+2025-06-07 13:57:28.226 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:57:29.800 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-07 13:57:29.804 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-07 13:57:29.804 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:57:30.926 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 9 BLOCK_SHAPE 0
+2025-06-07 13:57:30.926 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 8 with rotation 0
+2025-06-07 13:57:30.927 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:57:31.976 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 4 1 FOUR_SHAPE 0
+2025-06-07 13:57:31.977 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 3, 0 with rotation 0
+2025-06-07 13:57:31.977 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:57:32.943 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 4 6 FOUR_SHAPE 0
+2025-06-07 13:57:32.943 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 3, 5 with rotation 0
+2025-06-07 13:57:32.943 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:57:34.059 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 1 FOUR_SHAPE 0
+2025-06-07 13:57:34.060 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 0 with rotation 0
+2025-06-07 13:57:34.060 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:57:35.143 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 6 FOUR_SHAPE 0
+2025-06-07 13:57:35.145 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 5 with rotation 0
+2025-06-07 13:57:35.145 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:57:36.493 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 6 1 TWO_SHAPE 0
+2025-06-07 13:57:36.493 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 5, 0 with rotation 0
+2025-06-07 13:57:36.493 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:57:37.828 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 6 4 TWO_SHAPE 0
+2025-06-07 13:57:37.832 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 5, 3 with rotation 0
+2025-06-07 13:57:37.833 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 13:57:41.515 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 6 1 TWO_SHAPE 0
+2025-06-07 13:57:41.519 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 5, 0 with rotation 0
+2025-06-07 13:57:41.519 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:57:44.593 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 6 4 TWO_SHAPE 0
+2025-06-07 13:57:44.596 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 5, 3 with rotation 0
+2025-06-07 13:57:44.596 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 13:57:44.597 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:57:57.209 [pool-1-thread-1] WARN  cz.vse.server.Message - Command could not be processed: BOMB 1 1, it is not user1`s turn
+2025-06-07 13:58:00.228 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 1
+2025-06-07 13:58:00.232 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user2.
+2025-06-07 13:58:00.232 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user1.
+2025-06-07 13:58:00.233 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:01.214 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 7 5
+2025-06-07 13:58:01.223 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 5 to client: user1.
+2025-06-07 13:58:01.224 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 5 to client: user2.
+2025-06-07 13:58:01.224 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:02.777 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 2
+2025-06-07 13:58:02.779 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user2.
+2025-06-07 13:58:02.780 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user1.
+2025-06-07 13:58:02.780 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:03.546 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 5
+2025-06-07 13:58:03.549 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 4 5 to client: user1.
+2025-06-07 13:58:03.550 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 4 5 to client: user2.
+2025-06-07 13:58:03.550 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:04.696 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 3
+2025-06-07 13:58:04.698 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 3 to client: user2.
+2025-06-07 13:58:04.698 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 3 to client: user1.
+2025-06-07 13:58:04.698 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:05.309 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 5 6
+2025-06-07 13:58:05.312 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 6 to client: user1.
+2025-06-07 13:58:05.312 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 6 to client: user2.
+2025-06-07 13:58:05.312 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:06.226 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 4
+2025-06-07 13:58:06.227 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user2.
+2025-06-07 13:58:06.227 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user1.
+2025-06-07 13:58:06.227 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:06.943 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 7 9
+2025-06-07 13:58:06.947 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 9 to client: user1.
+2025-06-07 13:58:06.947 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 9 to client: user2.
+2025-06-07 13:58:06.947 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:07.759 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 1
+2025-06-07 13:58:07.759 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 1 to client: user2.
+2025-06-07 13:58:07.759 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 1 to client: user1.
+2025-06-07 13:58:07.759 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:08.511 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 8 7
+2025-06-07 13:58:08.516 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 7 to client: user1.
+2025-06-07 13:58:08.516 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 7 to client: user2.
+2025-06-07 13:58:08.516 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:09.509 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 2
+2025-06-07 13:58:09.510 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user2.
+2025-06-07 13:58:09.510 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user1.
+2025-06-07 13:58:09.511 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:10.128 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 2
+2025-06-07 13:58:10.132 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user1.
+2025-06-07 13:58:10.132 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user2.
+2025-06-07 13:58:10.132 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:11.245 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 3
+2025-06-07 13:58:11.253 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 3 to client: user2.
+2025-06-07 13:58:11.254 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 3 to client: user1.
+2025-06-07 13:58:11.255 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:12.143 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 9
+2025-06-07 13:58:12.148 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 9 to client: user1.
+2025-06-07 13:58:12.148 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 9 to client: user2.
+2025-06-07 13:58:12.148 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:13.284 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 4
+2025-06-07 13:58:13.293 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user2.
+2025-06-07 13:58:13.293 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user1.
+2025-06-07 13:58:13.293 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:14.061 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 3 4
+2025-06-07 13:58:14.066 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 3 4 to client: user1.
+2025-06-07 13:58:14.066 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 3 4 to client: user2.
+2025-06-07 13:58:14.066 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:15.200 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 6
+2025-06-07 13:58:15.209 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user2.
+2025-06-07 13:58:15.209 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user1.
+2025-06-07 13:58:15.209 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:15.810 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 5
+2025-06-07 13:58:15.813 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 2 5 to client: user1.
+2025-06-07 13:58:15.813 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 2 5 to client: user2.
+2025-06-07 13:58:15.813 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:16.812 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 7
+2025-06-07 13:58:16.813 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 7 to client: user2.
+2025-06-07 13:58:16.830 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 7 to client: user1.
+2025-06-07 13:58:16.830 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:17.393 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 3 8
+2025-06-07 13:58:17.393 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 3 8 to client: user1.
+2025-06-07 13:58:17.394 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 3 8 to client: user2.
+2025-06-07 13:58:17.394 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:18.509 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 6
+2025-06-07 13:58:18.512 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 6 to client: user2.
+2025-06-07 13:58:18.513 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 6 to client: user1.
+2025-06-07 13:58:18.513 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:19.060 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 6 9
+2025-06-07 13:58:19.062 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 9 to client: user1.
+2025-06-07 13:58:19.062 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 9 to client: user2.
+2025-06-07 13:58:19.062 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:19.961 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 7
+2025-06-07 13:58:19.962 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 7 to client: user2.
+2025-06-07 13:58:19.962 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 7 to client: user1.
+2025-06-07 13:58:19.962 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:20.778 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 9
+2025-06-07 13:58:20.779 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 9 to client: user1.
+2025-06-07 13:58:20.779 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 9 to client: user2.
+2025-06-07 13:58:20.779 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:21.977 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 9
+2025-06-07 13:58:21.978 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 9 to client: user2.
+2025-06-07 13:58:21.979 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 9 to client: user1.
+2025-06-07 13:58:21.979 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:22.827 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 5 7
+2025-06-07 13:58:22.829 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 7 to client: user1.
+2025-06-07 13:58:22.830 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 7 to client: user2.
+2025-06-07 13:58:22.830 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:23.942 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 10
+2025-06-07 13:58:23.943 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 10 to client: user2.
+2025-06-07 13:58:23.943 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 10 to client: user1.
+2025-06-07 13:58:23.943 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:25.109 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 2 2
+2025-06-07 13:58:25.110 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user1.
+2025-06-07 13:58:25.110 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user2.
+2025-06-07 13:58:25.110 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:26.360 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 9
+2025-06-07 13:58:26.363 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 9 to client: user2.
+2025-06-07 13:58:26.364 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 9 to client: user1.
+2025-06-07 13:58:26.364 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:27.528 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 2
+2025-06-07 13:58:27.530 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user1.
+2025-06-07 13:58:27.530 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user2.
+2025-06-07 13:58:27.531 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:28.760 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 10
+2025-06-07 13:58:28.763 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 10 to client: user2.
+2025-06-07 13:58:28.763 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 10 to client: user1.
+2025-06-07 13:58:28.763 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:30.477 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 5 3
+2025-06-07 13:58:30.479 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 3 to client: user1.
+2025-06-07 13:58:30.479 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 3 to client: user2.
+2025-06-07 13:58:30.479 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:31.742 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 1
+2025-06-07 13:58:31.743 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 1 to client: user2.
+2025-06-07 13:58:31.743 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 1 to client: user1.
+2025-06-07 13:58:31.743 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:32.945 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 6
+2025-06-07 13:58:32.947 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user1.
+2025-06-07 13:58:32.948 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user2.
+2025-06-07 13:58:32.948 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:34.245 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 2
+2025-06-07 13:58:34.246 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user2.
+2025-06-07 13:58:34.246 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user1.
+2025-06-07 13:58:34.246 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:35.795 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 1 4
+2025-06-07 13:58:35.799 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user1.
+2025-06-07 13:58:35.799 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user2.
+2025-06-07 13:58:35.799 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:37.048 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 3
+2025-06-07 13:58:37.050 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 3 to client: user2.
+2025-06-07 13:58:37.050 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 3 to client: user1.
+2025-06-07 13:58:37.050 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:37.960 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 7
+2025-06-07 13:58:37.968 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 7 to client: user1.
+2025-06-07 13:58:37.969 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 7 to client: user2.
+2025-06-07 13:58:37.969 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:39.350 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 4
+2025-06-07 13:58:39.358 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 4 to client: user2.
+2025-06-07 13:58:39.358 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 4 to client: user1.
+2025-06-07 13:58:39.358 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:40.160 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 9 9
+2025-06-07 13:58:40.161 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 9 9 to client: user1.
+2025-06-07 13:58:40.161 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 9 9 to client: user2.
+2025-06-07 13:58:40.161 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:40.893 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 8
+2025-06-07 13:58:40.898 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 8 to client: user2.
+2025-06-07 13:58:40.898 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 8 to client: user1.
+2025-06-07 13:58:40.898 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:42.142 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 4 8
+2025-06-07 13:58:42.143 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 8 to client: user1.
+2025-06-07 13:58:42.143 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 8 to client: user2.
+2025-06-07 13:58:42.143 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:43.565 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 6
+2025-06-07 13:58:43.574 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 6 to client: user2.
+2025-06-07 13:58:43.574 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 6 to client: user1.
+2025-06-07 13:58:43.574 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:44.276 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 9 5
+2025-06-07 13:58:44.276 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 9 5 to client: user1.
+2025-06-07 13:58:44.276 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 9 5 to client: user2.
+2025-06-07 13:58:44.276 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:45.385 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 7
+2025-06-07 13:58:45.393 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 7 to client: user2.
+2025-06-07 13:58:45.393 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 7 to client: user1.
+2025-06-07 13:58:45.393 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:47.081 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 8 3
+2025-06-07 13:58:47.083 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 3 to client: user1.
+2025-06-07 13:58:47.083 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 3 to client: user2.
+2025-06-07 13:58:47.083 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:48.992 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 8
+2025-06-07 13:58:48.993 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 8 to client: user2.
+2025-06-07 13:58:48.993 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 8 to client: user1.
+2025-06-07 13:58:48.993 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:49.992 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 7 2
+2025-06-07 13:58:49.992 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 2 to client: user1.
+2025-06-07 13:58:49.992 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 2 to client: user2.
+2025-06-07 13:58:49.993 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:51.277 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 9
+2025-06-07 13:58:51.280 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 9 to client: user2.
+2025-06-07 13:58:51.280 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 9 to client: user1.
+2025-06-07 13:58:51.280 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:52.292 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 8 1
+2025-06-07 13:58:52.293 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 1 to client: user1.
+2025-06-07 13:58:52.294 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 1 to client: user2.
+2025-06-07 13:58:52.294 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:53.331 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 1
+2025-06-07 13:58:53.335 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 1 to client: user2.
+2025-06-07 13:58:53.335 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 1 to client: user1.
+2025-06-07 13:58:53.336 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:54.429 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 8 6
+2025-06-07 13:58:54.435 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 6 to client: user1.
+2025-06-07 13:58:54.435 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 6 to client: user2.
+2025-06-07 13:58:54.435 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:55.626 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 2
+2025-06-07 13:58:55.628 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 2 to client: user2.
+2025-06-07 13:58:55.629 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 2 to client: user1.
+2025-06-07 13:58:55.629 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:56.480 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 6 7
+2025-06-07 13:58:56.482 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 7 to client: user1.
+2025-06-07 13:58:56.482 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 7 to client: user2.
+2025-06-07 13:58:56.482 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:58:58.762 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 4
+2025-06-07 13:58:58.767 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 4 to client: user2.
+2025-06-07 13:58:58.767 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 4 to client: user1.
+2025-06-07 13:58:58.767 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:58:59.930 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: BOMB 7 8
+2025-06-07 13:58:59.932 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 8 to client: user1.
+2025-06-07 13:58:59.933 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 8 to client: user2.
+2025-06-07 13:58:59.933 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 13:59:01.626 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 5
+2025-06-07 13:59:01.629 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 5 to client: user2.
+2025-06-07 13:59:01.629 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 5 to client: user1.
+2025-06-07 13:59:01.629 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 13:59:01.629 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: LOST to client: user1.
+2025-06-07 13:59:01.631 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 13:59:13.131 [pool-1-thread-2] WARN  cz.vse.server.Message - Command could not be processed: QUIT, it is not user2`s turn
+2025-06-07 13:59:37.973 [pool-1-thread-1] WARN  cz.vse.server.ClientHandler - Client not logged in. Message: QUIT could not be processed
+2025-06-07 13:59:37.974 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: cz.vse.server.ClientHandler@14553cd7.
+2025-06-07 13:59:37.980 [pool-1-thread-1] WARN  cz.vse.server.ClientHandler - Client user1 disconnected unexpectedly: Connection reset
+2025-06-07 14:03:34.233 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 14:03:57.180 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@3fec3943 connected to the server
+2025-06-07 14:04:01.929 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@74425a7c connected to the server
+2025-06-07 14:04:01.930 [pool-1-thread-2] WARN  cz.vse.server.Server - Username 'user1' is already in use. Rejecting client connection.
+2025-06-07 14:04:01.930 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user1.
+2025-06-07 14:04:01.930 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 14:04:01.930 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 14:04:01.930 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 14:05:42.533 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@4facb60 connected to the server
+2025-06-07 14:05:42.564 [pool-1-thread-3] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 14:05:42.564 [pool-1-thread-3] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 14:05:42.565 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 14:05:42.565 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 14:05:42.565 [pool-1-thread-3] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 14:05:46.903 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 14:05:46.907 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 14:05:46.908 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 14:05:48.128 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 14:05:48.130 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 14:05:48.131 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 14:05:49.408 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 5 BLOCK_SHAPE 0
+2025-06-07 14:05:49.412 [pool-1-thread-1] WARN  cz.vse.server.Game - Invalid placement: Adjacent ship detected at 0, 4
+2025-06-07 14:05:49.412 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user1.
+2025-06-07 14:05:54.340 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-07 14:05:54.341 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-07 14:05:54.341 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 14:07:06.110 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@119dfed5 connected to the server
+2025-06-07 14:07:06.115 [pool-1-thread-1] WARN  cz.vse.server.Server - Username 'user1' is already in use. Rejecting client connection.
+2025-06-07 14:07:06.115 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user1.
+2025-06-07 14:07:06.115 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 14:07:06.115 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 14:07:06.115 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 14:08:45.980 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 14:09:03.048 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@29583b7b connected to the server
+2025-06-07 14:09:10.361 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@51f285a7 connected to the server
+2025-06-07 14:09:10.365 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 14:09:10.365 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 14:09:10.365 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 14:09:10.365 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 14:09:10.365 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 14:09:14.613 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 14:09:14.616 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 14:09:14.616 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 14:09:16.015 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 14:09:16.015 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 14:09:16.015 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 14:11:48.087 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 14:12:07.997 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@751cb79 connected to the server
+2025-06-07 14:12:13.480 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@7ba82d8f connected to the server
+2025-06-07 14:12:13.485 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 14:12:13.485 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 14:12:13.485 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 14:12:13.486 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 14:12:13.486 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 14:12:19.676 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 14:12:19.677 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 14:12:19.677 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 14:12:20.659 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 4 SIX_SHAPE 0
+2025-06-07 14:12:20.660 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 3 with rotation 0
+2025-06-07 14:12:20.660 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 14:12:24.376 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user2
+2025-06-07 14:12:24.377 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user2
+2025-06-07 14:12:24.377 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [user1, user2]
+2025-06-07 14:12:24.378 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: user2
+2025-06-07 14:12:24.378 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: [user1]
+2025-06-07 14:12:24.378 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user1.
+2025-06-07 14:12:24.378 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user2 was closed
+2025-06-07 14:12:28.959 [pool-1-thread-1] INFO  cz.vse.server.Message - Client user1 is disconnecting.
+2025-06-07 14:12:28.961 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user1.
+2025-06-07 14:12:28.963 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 14:12:28.963 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 14:12:28.963 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 14:12:28.963 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users before: [user1]
+2025-06-07 14:12:28.963 [pool-1-thread-1] INFO  cz.vse.server.Server - Removed active user: user1
+2025-06-07 14:12:28.963 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users after: []
+2025-06-07 14:12:28.964 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 14:12:28.964 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 14:12:28.964 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: QUIT
+2025-06-07 14:12:28.964 [pool-1-thread-1] WARN  cz.vse.server.Message - Unknown command recieved: `QUIT` from user1 
+2025-06-07 14:12:28.964 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user1.
+2025-06-07 14:12:28.965 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection for client user1 is already closing
+2025-06-07 14:17:43.876 [main] INFO  cz.vse.server.Server - Server is listening for connections on port: 9091
+2025-06-07 14:18:03.652 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@9ff3e9 connected to the server
+2025-06-07 14:18:08.917 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@5a07646 connected to the server
+2025-06-07 14:18:08.920 [pool-1-thread-2] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 14:18:08.920 [pool-1-thread-2] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 14:18:08.920 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 14:18:08.921 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 14:18:08.921 [pool-1-thread-2] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 14:18:15.930 [pool-1-thread-1] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 14:18:15.938 [pool-1-thread-1] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 14:18:15.938 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 14:18:25.549 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 14:18:25.550 [pool-1-thread-1] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 14:18:25.550 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users before: [user1, user2]
+2025-06-07 14:18:25.550 [pool-1-thread-1] INFO  cz.vse.server.Server - Removed active user: user1
+2025-06-07 14:18:25.550 [pool-1-thread-1] DEBUG cz.vse.server.Server - Active users after: [user2]
+2025-06-07 14:18:25.550 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 14:18:25.550 [pool-1-thread-1] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 14:18:39.201 [pool-1-thread-2] INFO  cz.vse.server.Message - Client user2 is disconnecting.
+2025-06-07 14:18:39.203 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user2.
+2025-06-07 14:18:39.203 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user1.
+2025-06-07 14:18:39.204 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user2
+2025-06-07 14:18:39.204 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user2
+2025-06-07 14:18:39.204 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [user2]
+2025-06-07 14:18:39.204 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: user2
+2025-06-07 14:18:39.204 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: []
+2025-06-07 14:18:39.204 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user1.
+2025-06-07 14:18:39.204 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user2 was closed
+2025-06-07 14:18:39.204 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: QUIT
+2025-06-07 14:18:39.204 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection for client user2 is already closing
+2025-06-07 14:19:24.254 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@10fe1615 connected to the server
+2025-06-07 14:19:29.165 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Client cz.vse.server.ClientHandler@777f89c9 connected to the server
+2025-06-07 14:19:29.166 [pool-1-thread-3] INFO  cz.vse.server.Server - user1 has been assigned to the game session
+2025-06-07 14:19:29.166 [pool-1-thread-3] INFO  cz.vse.server.Server - user2 has been assigned to the game session
+2025-06-07 14:19:29.166 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user1.
+2025-06-07 14:19:29.166 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: READY to client: user2.
+2025-06-07 14:19:29.166 [pool-1-thread-3] INFO  cz.vse.server.Server - Game session started between user1 and user2
+2025-06-07 14:19:36.790 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 14:19:36.791 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 14:19:36.792 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 14:19:38.049 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 1 1 SIX_SHAPE 0
+2025-06-07 14:19:38.049 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 0, 0 with rotation 0
+2025-06-07 14:19:38.049 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 14:19:39.181 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-07 14:19:39.181 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-07 14:19:39.181 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 14:19:40.313 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 1 6 BLOCK_SHAPE 0
+2025-06-07 14:19:40.313 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 0, 5 with rotation 0
+2025-06-07 14:19:40.313 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 14:19:41.264 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 1 9 BLOCK_SHAPE 0
+2025-06-07 14:19:41.265 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 0, 8 with rotation 0
+2025-06-07 14:19:41.265 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 14:19:42.681 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 1 9 BLOCK_SHAPE 0
+2025-06-07 14:19:42.681 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 0, 8 with rotation 0
+2025-06-07 14:19:42.681 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 14:19:43.882 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 2 1 FOUR_SHAPE 0
+2025-06-07 14:19:43.883 [pool-1-thread-2] WARN  cz.vse.server.Game - Invalid placement: Overlap detected at 1, 0
+2025-06-07 14:19:43.884 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user1.
+2025-06-07 14:19:45.098 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 3 1 FOUR_SHAPE 0
+2025-06-07 14:19:45.099 [pool-1-thread-2] WARN  cz.vse.server.Game - Invalid placement: Adjacent ship detected at 2, 0
+2025-06-07 14:19:45.100 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user1.
+2025-06-07 14:19:49.015 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 3 1 FOUR_SHAPE 0
+2025-06-07 14:19:49.016 [pool-1-thread-2] WARN  cz.vse.server.Game - Invalid placement: Adjacent ship detected at 2, 0
+2025-06-07 14:19:49.016 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user1.
+2025-06-07 14:19:51.831 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 1 FOUR_SHAPE 0
+2025-06-07 14:19:51.832 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 0 with rotation 0
+2025-06-07 14:19:51.833 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 14:19:53.315 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 4 6 FOUR_SHAPE 0
+2025-06-07 14:19:53.315 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 3, 5 with rotation 0
+2025-06-07 14:19:53.316 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 14:19:55.082 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 4 1 FOUR_SHAPE 0
+2025-06-07 14:19:55.083 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 3, 0 with rotation 0
+2025-06-07 14:19:55.083 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 14:19:55.951 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 4 6 FOUR_SHAPE 0
+2025-06-07 14:19:55.953 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 3, 5 with rotation 0
+2025-06-07 14:19:55.954 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 14:19:57.397 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 6 1 TWO_SHAPE 0
+2025-06-07 14:19:57.397 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 5, 0 with rotation 0
+2025-06-07 14:19:57.397 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 14:19:58.248 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: PLACE 6 4 TWO_SHAPE 0
+2025-06-07 14:19:58.249 [pool-1-thread-2] INFO  cz.vse.server.Game - Ship placed successfully at 5, 3 with rotation 0
+2025-06-07 14:19:58.249 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user1.
+2025-06-07 14:20:01.101 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 1 1
+2025-06-07 14:20:01.102 [pool-1-thread-3] WARN  cz.vse.server.Message - Command could not be processed: BOMB 1 1, it is placement phase
+2025-06-07 14:20:01.102 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user2.
+2025-06-07 14:20:02.050 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 7
+2025-06-07 14:20:02.051 [pool-1-thread-2] WARN  cz.vse.server.Message - Command could not be processed: BOMB 4 7, it is placement phase
+2025-06-07 14:20:02.051 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user1.
+2025-06-07 14:20:04.249 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 1
+2025-06-07 14:20:04.251 [pool-1-thread-2] WARN  cz.vse.server.Message - Command could not be processed: BOMB 1 1, it is placement phase
+2025-06-07 14:20:04.252 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: FAILURE to client: user1.
+2025-06-07 14:20:11.297 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 6 1 TWO_SHAPE 0
+2025-06-07 14:20:11.298 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 5, 0 with rotation 0
+2025-06-07 14:20:11.298 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 14:20:12.781 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: PLACE 6 4 TWO_SHAPE 0
+2025-06-07 14:20:12.782 [pool-1-thread-3] INFO  cz.vse.server.Game - Ship placed successfully at 5, 3 with rotation 0
+2025-06-07 14:20:12.782 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: SUCCESS to client: user2.
+2025-06-07 14:20:12.783 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:15.897 [pool-1-thread-2] WARN  cz.vse.server.Message - Command could not be processed: BOMB 1 1, it is not user1`s turn
+2025-06-07 14:20:17.247 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 1 1
+2025-06-07 14:20:17.253 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user2.
+2025-06-07 14:20:17.254 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user1.
+2025-06-07 14:20:17.254 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:18.346 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 1
+2025-06-07 14:20:18.347 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user1.
+2025-06-07 14:20:18.347 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 1 to client: user2.
+2025-06-07 14:20:18.347 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:19.497 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 1 2
+2025-06-07 14:20:19.498 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user2.
+2025-06-07 14:20:19.498 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 2 to client: user1.
+2025-06-07 14:20:19.498 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:19.997 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 4
+2025-06-07 14:20:19.998 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 4 to client: user1.
+2025-06-07 14:20:19.998 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 4 to client: user2.
+2025-06-07 14:20:19.998 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:20.830 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 1 3
+2025-06-07 14:20:20.831 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 3 to client: user2.
+2025-06-07 14:20:20.831 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 3 to client: user1.
+2025-06-07 14:20:20.831 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:21.364 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 8 6
+2025-06-07 14:20:21.365 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 6 to client: user1.
+2025-06-07 14:20:21.366 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 6 to client: user2.
+2025-06-07 14:20:21.367 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:22.264 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 1 4
+2025-06-07 14:20:22.265 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user2.
+2025-06-07 14:20:22.265 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 4 to client: user1.
+2025-06-07 14:20:22.266 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:22.797 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 4
+2025-06-07 14:20:22.797 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 4 to client: user1.
+2025-06-07 14:20:22.798 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 4 to client: user2.
+2025-06-07 14:20:22.798 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:23.913 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 2 1
+2025-06-07 14:20:23.914 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 1 to client: user2.
+2025-06-07 14:20:23.914 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 1 to client: user1.
+2025-06-07 14:20:23.914 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:24.364 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 6
+2025-06-07 14:20:24.364 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 6 to client: user1.
+2025-06-07 14:20:24.364 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 6 to client: user2.
+2025-06-07 14:20:24.364 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:25.231 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 2 2
+2025-06-07 14:20:25.232 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user2.
+2025-06-07 14:20:25.232 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user1.
+2025-06-07 14:20:25.233 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:26.714 [pool-1-thread-3] WARN  cz.vse.server.Message - Command could not be processed: BOMB 2 4, it is not user2`s turn
+2025-06-07 14:20:27.213 [pool-1-thread-3] WARN  cz.vse.server.Message - Command could not be processed: BOMB 2 3, it is not user2`s turn
+2025-06-07 14:20:28.431 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 6
+2025-06-07 14:20:28.432 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 6 to client: user1.
+2025-06-07 14:20:28.432 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 6 to client: user2.
+2025-06-07 14:20:28.432 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:30.214 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 2 3
+2025-06-07 14:20:30.215 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 3 to client: user2.
+2025-06-07 14:20:30.216 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 3 to client: user1.
+2025-06-07 14:20:30.216 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:31.530 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 7 8
+2025-06-07 14:20:31.530 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 8 to client: user1.
+2025-06-07 14:20:31.530 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 8 to client: user2.
+2025-06-07 14:20:31.530 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:32.614 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 2 4
+2025-06-07 14:20:32.615 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user2.
+2025-06-07 14:20:32.616 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user1.
+2025-06-07 14:20:32.616 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:33.464 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 10
+2025-06-07 14:20:33.465 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 4 10 to client: user1.
+2025-06-07 14:20:33.465 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 4 10 to client: user2.
+2025-06-07 14:20:33.465 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:34.647 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 1 6
+2025-06-07 14:20:34.648 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user2.
+2025-06-07 14:20:34.648 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 6 to client: user1.
+2025-06-07 14:20:34.648 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:35.397 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 3 8
+2025-06-07 14:20:35.397 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 3 8 to client: user1.
+2025-06-07 14:20:35.397 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 3 8 to client: user2.
+2025-06-07 14:20:35.397 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:36.481 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 1 7
+2025-06-07 14:20:36.482 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 7 to client: user2.
+2025-06-07 14:20:36.482 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 7 to client: user1.
+2025-06-07 14:20:36.482 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:37.448 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 5 7
+2025-06-07 14:20:37.449 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 7 to client: user1.
+2025-06-07 14:20:37.449 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 7 to client: user2.
+2025-06-07 14:20:37.449 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:38.730 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 2 6
+2025-06-07 14:20:38.731 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 6 to client: user2.
+2025-06-07 14:20:38.731 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 6 to client: user1.
+2025-06-07 14:20:38.731 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:39.651 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 5 8
+2025-06-07 14:20:39.652 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 8 to client: user1.
+2025-06-07 14:20:39.652 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 5 8 to client: user2.
+2025-06-07 14:20:39.652 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:40.914 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 2 7
+2025-06-07 14:20:40.915 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 7 to client: user2.
+2025-06-07 14:20:40.916 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 7 to client: user1.
+2025-06-07 14:20:40.916 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:41.731 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 9 4
+2025-06-07 14:20:41.732 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 9 4 to client: user1.
+2025-06-07 14:20:41.732 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 9 4 to client: user2.
+2025-06-07 14:20:41.733 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:42.864 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 1 9
+2025-06-07 14:20:42.865 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 9 to client: user2.
+2025-06-07 14:20:42.865 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 9 to client: user1.
+2025-06-07 14:20:42.866 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:44.164 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 7 3
+2025-06-07 14:20:44.165 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 3 to client: user1.
+2025-06-07 14:20:44.165 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 3 to client: user2.
+2025-06-07 14:20:44.165 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:45.414 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 1 10
+2025-06-07 14:20:45.415 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 10 to client: user2.
+2025-06-07 14:20:45.415 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 10 to client: user1.
+2025-06-07 14:20:45.416 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:46.147 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 10 2
+2025-06-07 14:20:46.148 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 10 2 to client: user1.
+2025-06-07 14:20:46.149 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 10 2 to client: user2.
+2025-06-07 14:20:46.149 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:47.147 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 2 9
+2025-06-07 14:20:47.148 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 9 to client: user2.
+2025-06-07 14:20:47.148 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 9 to client: user1.
+2025-06-07 14:20:47.149 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:47.864 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 4
+2025-06-07 14:20:47.864 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user1.
+2025-06-07 14:20:47.865 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 4 to client: user2.
+2025-06-07 14:20:47.865 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:49.013 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 2 10
+2025-06-07 14:20:49.014 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 10 to client: user2.
+2025-06-07 14:20:49.015 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 10 to client: user1.
+2025-06-07 14:20:49.015 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:50.163 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 2
+2025-06-07 14:20:50.164 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user1.
+2025-06-07 14:20:50.164 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user2.
+2025-06-07 14:20:50.164 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:51.114 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 4 1
+2025-06-07 14:20:51.114 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 1 to client: user2.
+2025-06-07 14:20:51.114 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 1 to client: user1.
+2025-06-07 14:20:51.115 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:52.198 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 6
+2025-06-07 14:20:52.199 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 6 to client: user1.
+2025-06-07 14:20:52.199 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 6 to client: user2.
+2025-06-07 14:20:52.199 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:53.130 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 4 3
+2025-06-07 14:20:53.131 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 3 to client: user2.
+2025-06-07 14:20:53.131 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 3 to client: user1.
+2025-06-07 14:20:53.131 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:54.581 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 4 1
+2025-06-07 14:20:54.581 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 1 to client: user1.
+2025-06-07 14:20:54.581 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 1 to client: user2.
+2025-06-07 14:20:54.581 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:20:57.365 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 4 2
+2025-06-07 14:20:57.367 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user2.
+2025-06-07 14:20:57.367 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 2 to client: user1.
+2025-06-07 14:20:57.367 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:20:59.031 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 2
+2025-06-07 14:20:59.032 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user1.
+2025-06-07 14:20:59.032 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 2 to client: user2.
+2025-06-07 14:20:59.032 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:21:00.230 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 4 4
+2025-06-07 14:21:00.230 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 4 to client: user2.
+2025-06-07 14:21:00.230 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 4 to client: user1.
+2025-06-07 14:21:00.231 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:21:01.297 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 8 8
+2025-06-07 14:21:01.298 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 8 to client: user1.
+2025-06-07 14:21:01.298 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 8 to client: user2.
+2025-06-07 14:21:01.299 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:21:02.447 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 4 6
+2025-06-07 14:21:02.448 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 6 to client: user2.
+2025-06-07 14:21:02.448 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 6 to client: user1.
+2025-06-07 14:21:02.448 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:21:03.047 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 8 9
+2025-06-07 14:21:03.048 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 9 to client: user1.
+2025-06-07 14:21:03.048 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 8 9 to client: user2.
+2025-06-07 14:21:03.049 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:21:04.080 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 4 7
+2025-06-07 14:21:04.081 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 7 to client: user2.
+2025-06-07 14:21:04.081 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 7 to client: user1.
+2025-06-07 14:21:04.081 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:21:04.964 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 6 10
+2025-06-07 14:21:04.965 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 10 to client: user1.
+2025-06-07 14:21:04.965 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 6 10 to client: user2.
+2025-06-07 14:21:04.965 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:21:06.080 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 4 8
+2025-06-07 14:21:06.081 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 8 to client: user2.
+2025-06-07 14:21:06.081 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 8 to client: user1.
+2025-06-07 14:21:06.081 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:21:07.115 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 2 10
+2025-06-07 14:21:07.115 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 10 to client: user1.
+2025-06-07 14:21:07.116 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 2 10 to client: user2.
+2025-06-07 14:21:07.116 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:21:08.297 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 4 9
+2025-06-07 14:21:08.298 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 9 to client: user2.
+2025-06-07 14:21:08.298 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 4 9 to client: user1.
+2025-06-07 14:21:08.298 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:21:09.864 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 1 7
+2025-06-07 14:21:09.865 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 7 to client: user1.
+2025-06-07 14:21:09.866 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 1 7 to client: user2.
+2025-06-07 14:21:09.866 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:21:11.297 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 6 1
+2025-06-07 14:21:11.297 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 1 to client: user2.
+2025-06-07 14:21:11.297 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 1 to client: user1.
+2025-06-07 14:21:11.297 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:21:12.414 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 7 5
+2025-06-07 14:21:12.415 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 5 to client: user1.
+2025-06-07 14:21:12.415 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 7 5 to client: user2.
+2025-06-07 14:21:12.416 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:21:13.397 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 6 2
+2025-06-07 14:21:13.398 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 2 to client: user2.
+2025-06-07 14:21:13.398 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 2 to client: user1.
+2025-06-07 14:21:13.399 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:21:14.435 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 10 5
+2025-06-07 14:21:14.438 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 10 5 to client: user1.
+2025-06-07 14:21:14.439 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 10 5 to client: user2.
+2025-06-07 14:21:14.439 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:21:15.752 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 6 4
+2025-06-07 14:21:15.761 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 4 to client: user2.
+2025-06-07 14:21:15.761 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 4 to client: user1.
+2025-06-07 14:21:15.761 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:21:16.764 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: BOMB 10 8
+2025-06-07 14:21:16.765 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 10 8 to client: user1.
+2025-06-07 14:21:16.765 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: MISS 10 8 to client: user2.
+2025-06-07 14:21:16.765 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user2.
+2025-06-07 14:21:17.947 [pool-1-thread-3] INFO  cz.vse.server.Message - Received message: BOMB 6 5
+2025-06-07 14:21:17.947 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 5 to client: user2.
+2025-06-07 14:21:17.947 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: HIT 6 5 to client: user1.
+2025-06-07 14:21:17.947 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: TURN to client: user1.
+2025-06-07 14:21:17.948 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: LOST to client: user1.
+2025-06-07 14:21:17.948 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 14:21:26.098 [pool-1-thread-3] INFO  cz.vse.server.Message - Client user2 is disconnecting.
+2025-06-07 14:21:26.099 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user2.
+2025-06-07 14:21:26.099 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user1.
+2025-06-07 14:21:26.100 [pool-1-thread-3] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user2
+2025-06-07 14:21:26.100 [pool-1-thread-3] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user2
+2025-06-07 14:21:26.100 [pool-1-thread-3] DEBUG cz.vse.server.Server - Active users before: [user1, user2]
+2025-06-07 14:21:26.101 [pool-1-thread-3] INFO  cz.vse.server.Server - Removed active user: user2
+2025-06-07 14:21:26.101 [pool-1-thread-3] DEBUG cz.vse.server.Server - Active users after: [user1]
+2025-06-07 14:21:26.101 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user1.
+2025-06-07 14:21:26.101 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Connection to client user2 was closed
+2025-06-07 14:21:26.101 [pool-1-thread-3] WARN  cz.vse.server.Message - Command could not be processed: QUIT, it is not user2`s turn
+2025-06-07 14:21:26.102 [pool-1-thread-3] INFO  cz.vse.server.ClientHandler - Connection for client user2 is already closing
+2025-06-07 14:21:28.880 [pool-1-thread-2] INFO  cz.vse.server.Message - Client user1 is disconnecting.
+2025-06-07 14:21:28.881 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: QUIT to client: user1.
+2025-06-07 14:21:28.882 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 14:21:28.882 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing InputStream for client user1
+2025-06-07 14:21:28.882 [pool-1-thread-2] DEBUG cz.vse.server.ClientHandler - Closing OutputStream for client user1
+2025-06-07 14:21:28.882 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users before: [user1]
+2025-06-07 14:21:28.882 [pool-1-thread-2] INFO  cz.vse.server.Server - Removed active user: user1
+2025-06-07 14:21:28.882 [pool-1-thread-2] DEBUG cz.vse.server.Server - Active users after: []
+2025-06-07 14:21:28.883 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Server sent message: WIN to client: user2.
+2025-06-07 14:21:28.883 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection to client user1 was closed
+2025-06-07 14:21:28.883 [pool-1-thread-2] INFO  cz.vse.server.Message - Received message: QUIT
+2025-06-07 14:21:28.883 [pool-1-thread-2] INFO  cz.vse.server.ClientHandler - Connection for client user1 is already closing
