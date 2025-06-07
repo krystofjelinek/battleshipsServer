@@ -62,8 +62,7 @@ public class ClientHandler implements Runnable {
                         if (parts.length == 2) {
                             setUsername(parts[1]);
                             setLoggedIn(true);
-                            log.info("User '{}' logged in successfully", parts[1]);
-                            //sendMessage("Welcome, " + parts[1] + "!");
+                            //log.info("User '{}' logged in successfully", parts[1]);
                             server.addWaitingClient(this);
 
                         } else {
