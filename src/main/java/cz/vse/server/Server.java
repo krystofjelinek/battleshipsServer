@@ -15,6 +15,9 @@ import java.util.concurrent.*;
  */
 public class Server {
     private final int port;
+
+
+
     private final ExecutorService threadPool = Executors.newCachedThreadPool();
     private final ConcurrentLinkedQueue<ClientHandler> waitingClients = new ConcurrentLinkedQueue<>();
     private final Logger log = LoggerFactory.getLogger(this.getClass());
@@ -44,6 +47,8 @@ public class Server {
                 throw new RuntimeException(e);
             }
         }
+
+        //TODO timeout
 
         if (args.length == 0) {
             InputStream config = Server.class.getClassLoader().getResourceAsStream("config.properties");
@@ -151,9 +156,11 @@ public class Server {
         try {
             if (!threadPool.awaitTermination(5, TimeUnit.SECONDS)) {
                 threadPool.shutdownNow();
+                running = false;
             }
         } catch (InterruptedException e) {
             threadPool.shutdownNow();
+            running = false;
         }
         log.warn("All connections closed and server shut down.");
     }

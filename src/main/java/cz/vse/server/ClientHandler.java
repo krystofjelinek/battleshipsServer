@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.net.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 
 /**
  * This class handles communication with a connected client.
@@ -55,10 +57,23 @@ public class ClientHandler implements Runnable {
             log.info("Client {} connected to the server", this);
 
             while (!socket.isClosed()) {
+
+                if (isLoggedIn()){
+                    socket.setSoTimeout(60000);
+                    log.info("Timeout for client: {} has been reset", this);
+                }
+
                 String receivedMessage = in.readLine();
+
+                if (receivedMessage == null && !socket.isClosed()) {
+                    log.warn("Client {} disconnected unexpectedly", this.username);
+                    closeConnection(loggedIn);
+                    return;
+                }
                 if (receivedMessage == null) {
                     break;
                 }
+
                 if (!isLoggedIn()) {
                     // Handle login or user-related commands
                     if (receivedMessage.startsWith("USER")) {
@@ -130,6 +145,7 @@ public class ClientHandler implements Runnable {
             return; // Prevent recursive calls
         }
         isClosing = true;
+        this.sendMessage("QUIT");
 
         try {
             // Close input stream
